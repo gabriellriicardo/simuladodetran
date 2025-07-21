@@ -1,0 +1,644 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simulado DETRAN-PE</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background: linear-gradient(135deg, #f5f7fa 0%, #e9eff5 100%);
+        }
+        .main-container {
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+        }
+        .question-card {
+            transition: opacity 0.4s ease-in-out;
+        }
+        .option-label {
+            transition: all 0.25s ease;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .option-label:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+        }
+        .option-label.selected {
+            background-color: #e0f2fe;
+            border-color: #38bdf8;
+            color: #0c4a6e;
+            box-shadow: 0 4px 15px rgba(56, 189, 248, 0.2);
+        }
+        .option-label.correct {
+            background-color: #dcfce7 !important;
+            border-color: #4ade80 !important;
+            box-shadow: 0 4px 15px rgba(74, 222, 128, 0.2);
+        }
+        .option-label.incorrect {
+            background-color: #fee2e2 !important;
+            border-color: #f87171 !important;
+            box-shadow: 0 4px 15px rgba(248, 113, 113, 0.2);
+        }
+        .nav-btn {
+            width: 36px;
+            height: 36px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 600;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            border: 2px solid transparent;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+        }
+        .nav-btn.not-answered { background-color: #fff; color: #ef4444; border-color: #fecaca; }
+        .nav-btn.current { background-color: #fef08a; color: #a16207; border-color: #facc15; transform: scale(1.1); box-shadow: 0 4px 10px rgba(250, 204, 21, 0.4);}
+        .nav-btn.answered { background-color: #dcfce7; color: #166534; border-color: #86efac;}
+        .nav-btn:hover { transform: scale(1.1); }
+        .check-icon {
+            opacity: 0;
+            transform: scale(0.5);
+            transition: all 0.25s ease;
+        }
+        .option-label.selected .check-icon {
+            opacity: 1;
+            transform: scale(1);
+        }
+        .btn-primary {
+            background: linear-gradient(to right, #3b82f6, #2563eb);
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px -5px rgba(59, 130, 246, 0.6);
+        }
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 7px 20px -5px rgba(59, 130, 246, 0.8);
+        }
+        .btn-secondary {
+            background-color: #475569;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px -5px rgba(71, 85, 105, 0.5);
+        }
+        .btn-secondary:hover {
+            background-color: #334155;
+            transform: translateY(-2px);
+            box-shadow: 0 7px 20px -5px rgba(71, 85, 105, 0.7);
+        }
+        .btn-success {
+            background: linear-gradient(to right, #22c55e, #16a34a);
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px -5px rgba(34, 197, 94, 0.6);
+        }
+        .btn-success:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 7px 20px -5px rgba(34, 197, 94, 0.8);
+        }
+        .score-circle {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: conic-gradient(
+                #22c55e var(--p), 
+                #e5e7eb 0
+            );
+        }
+        .test-type-card {
+            transition: all 0.2s ease-in-out;
+            border-width: 2px;
+        }
+        input[type="radio"]:checked + .test-type-card {
+            border-color: #3b82f6;
+            transform: translateY(-4px);
+            box-shadow: 0 8px 20px rgba(59, 130, 246, 0.2);
+        }
+    </style>
+</head>
+<body class="text-slate-800">
+
+    <div id="app" class="main-container max-w-5xl mx-auto p-4 md:p-8">
+        
+        <!-- Start Screen -->
+        <div id="start-screen" class="bg-white/70 backdrop-blur-sm border border-slate-200 p-8 rounded-2xl shadow-xl overflow-hidden">
+            <div class="text-center">
+                <h1 class="text-4xl lg:text-5xl font-extrabold text-slate-900 mb-3 leading-tight">Simulado Teórico DETRAN-PE</h1>
+                <p class="text-slate-600 text-lg mb-8 max-w-2xl mx-auto">Prepare-se para a prova oficial com questões atualizadas e garanta sua aprovação.</p>
+                
+                <div class="w-full max-w-md mx-auto mb-8">
+                    <label for="name-input" class="block text-slate-700 font-semibold mb-2">Primeiro, qual é o seu nome?</label>
+                    <input type="text" id="name-input" placeholder="Digite seu nome (opcional)" class="w-full px-4 py-3 bg-white border-2 border-slate-200 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition shadow-sm">
+                </div>
+
+                <div class="max-w-3xl mx-auto mb-8">
+                    <h2 class="text-xl font-bold mb-4 text-slate-800">Escolha o tipo de prova:</h2>
+                    <div id="test-type-selection" class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                        <!-- Test type options will be injected here -->
+                    </div>
+                </div>
+                
+                <button id="start-btn" class="btn-primary text-white font-bold py-4 px-10 rounded-full text-lg inline-flex items-center gap-3 group">
+                    Iniciar Simulado
+                    <svg class="w-6 h-6 transform group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"></path></svg>
+                </button>
+            </div>
+        </div>
+
+        <!-- Quiz Screen -->
+        <div id="quiz-screen" class="hidden">
+            <div class="flex flex-col lg:flex-row justify-between items-start gap-8 mb-6">
+                <div class="w-full lg:w-auto lg:max-w-md">
+                    <div id="question-nav-grid" class="grid grid-cols-5 sm:grid-cols-10 lg:grid-cols-5 gap-2">
+                        <!-- Navigation buttons will be injected here -->
+                    </div>
+                </div>
+                <div class="w-full lg:flex-grow flex flex-col gap-4">
+                     <div class="flex justify-start items-center gap-x-4 gap-y-2 text-sm flex-wrap p-3 bg-white/70 rounded-lg border">
+                        <div class="flex items-center gap-2"><div class="w-4 h-4 rounded-md border-2" style="background-color: #fff; border-color: #fecaca;"></div><span>Pendente</span></div>
+                        <div class="flex items-center gap-2"><div class="w-4 h-4 rounded-md border-2" style="background-color: #fef08a; border-color: #facc15;"></div><span>Atual</span></div>
+                        <div class="flex items-center gap-2"><div class="w-4 h-4 rounded-md border-2" style="background-color: #dcfce7; border-color: #86efac;"></div><span>Respondida</span></div>
+                    </div>
+                    <div id="timer" class="w-full text-4xl font-bold text-blue-800 bg-blue-100/80 p-4 rounded-lg text-center border-2 border-blue-200">40:00</div>
+                </div>
+            </div>
+
+            <div class="bg-white/70 backdrop-blur-sm border border-slate-200 p-6 sm:p-8 rounded-2xl shadow-xl relative min-h-[400px]">
+                <div id="questions-container">
+                    <!-- Questions will be injected and managed here -->
+                </div>
+                <div class="absolute bottom-6 right-6 flex gap-4">
+                     <button id="prev-btn" class="py-2 px-5 bg-slate-200 text-slate-700 font-semibold rounded-lg hover:bg-slate-300 transition-colors disabled:opacity-50 disabled:cursor-not-allowed shadow-sm">&larr; Anterior</button>
+                     <button id="next-btn" class="py-2 px-5 bg-slate-200 text-slate-700 font-semibold rounded-lg hover:bg-slate-300 transition-colors disabled:opacity-50 disabled:cursor-not-allowed shadow-sm">Próxima &rarr;</button>
+                </div>
+            </div>
+            
+            <div class="mt-8 flex justify-center">
+                <button id="submit-btn" class="btn-success w-full max-w-sm text-white font-bold py-4 px-6 rounded-full text-lg">
+                    Entregar Prova
+                </button>
+            </div>
+        </div>
+
+        <!-- Result Screen -->
+        <div id="result-screen" class="hidden text-center bg-white/70 backdrop-blur-sm border border-slate-200 p-8 rounded-2xl shadow-xl">
+            <div id="result-icon" class="mx-auto mb-4"></div>
+            <h1 id="result-title" class="text-4xl font-extrabold mb-2"></h1>
+            <p id="result-message" class="text-slate-600 text-lg mb-6"></p>
+            <div id="score-wrapper" class="relative my-8 flex justify-center">
+                 <div id="score-circle" style="--p:0%;">
+                    <div class="bg-white w-[120px] h-[120px] rounded-full flex items-center justify-center text-4xl font-bold" id="score"></div>
+                 </div>
+            </div>
+             <div class="bg-white/80 p-6 rounded-lg border border-slate-200 text-left max-w-md mx-auto mb-8">
+                <h3 class="text-xl font-bold mb-3 text-slate-800">Seu Desempenho</h3>
+                <div class="space-y-3 text-slate-700">
+                    <p class="flex justify-between">Total de Questões: <span id="total-questions-summary" class="font-bold"></span></p>
+                    <p class="flex justify-between">Respostas Corretas: <span id="correct-answers" class="font-bold text-green-600"></span></p>
+                    <p class="flex justify-between">Respostas Incorretas: <span id="incorrect-answers" class="font-bold text-red-600"></span></p>
+                </div>
+             </div>
+
+             <div id="reprovado-dicas" class="hidden text-left max-w-lg mx-auto mt-8 bg-amber-50 border-2 border-amber-200 p-6 rounded-xl">
+                <h3 class="text-xl font-bold mb-4 text-amber-800">Dicas para a Próxima Tentativa</h3>
+                <ul class="space-y-4 text-slate-700">
+                    <li class="flex items-start gap-3">
+                        <svg class="w-6 h-6 text-amber-600 mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"></path></svg>
+                        <div><span class="font-semibold">Revise suas respostas:</span> Clique no botão "Revisar Respostas" para entender onde errou e focar nos pontos fracos.</div>
+                    </li>
+                    <li class="flex items-start gap-3">
+                        <svg class="w-6 h-6 text-amber-600 mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"></path></svg>
+                        <div><span class="font-semibold">Foque nos temas:</span> Identifique os assuntos que mais errou (Placas, Primeiros Socorros, etc.) e reforce os estudos.</div>
+                    </li>
+                    <li class="flex items-start gap-3">
+                         <svg class="w-6 h-6 text-amber-600 mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v1.5M12 17.75V19M9.034 7.966l-1.06 1.06M16.026 14.974l-1.06 1.06M6.253 12H4.75M19.25 12h-1.5M9.034 16.026l-1.06-1.06M16.026 9.034l-1.06-1.06"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 14.75a2.75 2.75 0 100-5.5 2.75 2.75 0 000 5.5z"></path></svg>
+                        <div><span class="font-semibold">Consulte o Manual Oficial:</span> O manual do DETRAN é sua principal fonte de estudo. Garanta que o está utilizando.</div>
+                    </li>
+                </ul>
+            </div>
+
+             <div class="flex flex-col sm:flex-row gap-4 justify-center mt-8">
+                <button id="review-btn" class="btn-secondary w-full sm:w-auto text-white font-bold py-3 px-8 rounded-full">
+                    Revisar Respostas
+                </button>
+                <button id="restart-btn" class="btn-primary w-full sm:w-auto text-white font-bold py-3 px-8 rounded-full">
+                    Refazer Simulado
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // --- DOM Elements ---
+        const startScreen = document.getElementById('start-screen');
+        const quizScreen = document.getElementById('quiz-screen');
+        const resultScreen = document.getElementById('result-screen');
+        const startBtn = document.getElementById('start-btn');
+        const nameInput = document.getElementById('name-input');
+        const submitBtn = document.getElementById('submit-btn');
+        const restartBtn = document.getElementById('restart-btn');
+        const reviewBtn = document.getElementById('review-btn');
+        const questionsContainer = document.getElementById('questions-container');
+        const timerEl = document.getElementById('timer');
+        const questionNavGrid = document.getElementById('question-nav-grid');
+        const prevBtn = document.getElementById('prev-btn');
+        const nextBtn = document.getElementById('next-btn');
+        const scoreCircle = document.getElementById('score-circle');
+        const resultIcon = document.getElementById('result-icon');
+        const reprovadoDicas = document.getElementById('reprovado-dicas');
+        const testTypeSelection = document.getElementById('test-type-selection');
+        const totalQuestionsSummary = document.getElementById('total-questions-summary');
+
+        // --- Icons ---
+        const checkSVG = `<svg class="w-6 h-6 text-blue-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>`;
+        const correctSVG = `<svg class="w-6 h-6 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>`;
+        const incorrectSVG = `<svg class="w-6 h-6 text-red-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 14l2-2m0 0l2-2m-2 2l-2-2m2 2l2 2m7-2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>`;
+        const trophySVG = `<svg class="w-20 h-20 text-yellow-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M12.7.69a.75.75 0 00-1.4 0L8.62 5.2a.75.75 0 01-.57.41H3.5a.75.75 0 00-.73.93l1.25 4.38a.75.75 0 01-.1.65L.5 15.43a.75.75 0 00.62 1.27l4.38-1.25a.75.75 0 01.65.1l4.5 2.68a.75.75 0 00.7 0l4.5-2.68a.75.75 0 01.65-.1l4.38 1.25a.75.75 0 00.62-1.27l-3.42-3.86a.75.75 0 01-.1-.65l1.25-4.38a.75.75 0 00-.73-.93h-4.55a.75.75 0 01-.57-.41L12.7.69zM12 14.5a2.5 2.5 0 100-5 2.5 2.5 0 000 5z"/><path d="M18 19.5H6a.75.75 0 000 1.5h12a.75.75 0 000-1.5zM6.75 22.5h10.5a.75.75 0 000-1.5H6.75a.75.75 0 000 1.5z"/></svg>`;
+        const sadFaceSVG = `<svg class="w-20 h-20 text-slate-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.477 2 2 6.477 2 12s4.477 10 10 10 10-4.477 10-10S17.523 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm-3.5-9c.828 0 1.5.672 1.5 1.5s-.672 1.5-1.5 1.5S7 12.328 7 11.5 7.672 10 8.5 10zm7 0c.828 0 1.5.672 1.5 1.5s-.672 1.5-1.5 1.5-1.5-.672-1.5-1.5.672-1.5 1.5-1.5zm-5.03 4.5c.29.29.68.44 1.06.44s.77-.15 1.06-.44l.94-.94c.29-.29.29-.77 0-1.06s-.77-.29-1.06 0l-.94.94c-.29.29-.29.77 0 1.06z"/></svg>`;
+        
+        // --- Test Configurations ---
+        const testTypes = {
+            'primeira-habilitacao': {
+                title: 'Primeira Habilitação',
+                description: '30 questões sobre todos os temas. (40 min)',
+                totalQuestions: 30,
+                time: 40 * 60,
+                passingScore: 21,
+                categories: ['defensive', 'first-aid', 'mechanics', 'environment', 'legislation']
+            },
+            'renovacao': {
+                title: 'Renovação CNH',
+                description: '15 questões de Primeiros Socorros e Direção Defensiva. (25 min)',
+                totalQuestions: 15,
+                time: 25 * 60,
+                passingScore: 11,
+                categories: ['defensive', 'first-aid']
+            },
+            'reciclagem': {
+                title: 'Reciclagem',
+                description: '30 questões para revalidar seus conhecimentos. (40 min)',
+                totalQuestions: 30,
+                time: 40 * 60,
+                passingScore: 21,
+                categories: ['defensive', 'first-aid', 'mechanics', 'environment', 'legislation']
+            }
+        };
+        let selectedTestConfig = {};
+
+        // --- All Questions ---
+        const allQuestions = [
+            { category: 'defensive', question: "A velocidade compatível com a segurança permite ao condutor:", options: ["Realizar ultrapassagens arriscadas.","Manter a mesma velocidade em qualquer condição de via ou tempo.","Uma reação para evitar atingir um obstáculo, um pedestre ou outro veículo.","Frear bruscamente sem se preocupar com o veículo de trás."], answer: 2 },
+            { category: 'defensive', question: "Sob neblina ou cerração, o condutor deve utilizar:", options: ["Farol alto.","Pisca-alerta.","Luzes de posição (farolete).","Apenas a buzina para alertar os outros."], answer: 2 },
+            { category: 'defensive', question: "A forma correta de segurar o volante de direção é com as mãos na posição:", options: ["12 horas e 6 horas.","10 horas e 10 minutos.","Apoiadas na parte de cima, juntas.","9 horas e 15 minutos (semelhante aos ponteiros de um relógio)."], answer: 3 },
+            { category: 'defensive', question: "Distância de parada total é a soma da:", options: ["Distância de frenagem com a distância de ultrapassagem.","Distância de reação com a distância de frenagem.","Distância de seguimento com a distância de reação.","Distância de percepção com a distância lateral."], answer: 1 },
+            { category: 'defensive', question: "Um acidente ocasionado por excesso de velocidade e avanço de sinal é classificado como:", options: ["Negligência.", "Imperícia.", "Imprudência.", "Caso fortuito."], answer: 2 },
+            { category: 'defensive', question: "Em caso de chuva numa rodovia, o condutor deve:", options: ["Aumentar a velocidade para sair da chuva mais rápido.","Manter a velocidade e ligar o pisca-alerta.","Reduzir a velocidade, aumentar a distância do veículo à frente e acender o farol baixo.","Colar no veículo da frente para ter melhor visibilidade."], answer: 2 },
+            { category: 'defensive', question: "Para reduzir os 'pontos cegos' do veículo, o condutor deve:", options: ["Retirar os encostos de cabeça.","Usar película espelhada nos vidros.","Ajustar corretamente os espelhos retrovisores interno e externos.","Dirigir com os vidros laterais abertos."], answer: 2 },
+            { category: 'legislation', question: "O tráfego de veículos em acostamentos é:", options: ["Permitido para ultrapassagem.","Permitido em caso de congestionamento.","Proibido, exceto para acesso a imóveis ou conversões.", "Permitido para veículos de emergência com sirene desligada."], answer: 2 },
+            { category: 'legislation', question: "Qual destes NÃO é um equipamento obrigatório para veículos automotores?", options: ["Cinto de segurança.", "Encosto de cabeça.", "Farol de milha.", "Extintor de incêndio (para os veículos obrigados por lei)."], answer: 2 },
+            { category: 'legislation', question: "O registrador de velocidade e tempo (tacógrafo) é obrigatório para:", options: ["Todos os veículos de carga.","Veículos de transporte de passageiros com mais de 10 lugares e de transporte escolar.","Apenas para caminhões com mais de 20 anos de uso.","Qualquer veículo que trafegue em rodovias federais."], answer: 1 },
+            { category: 'first-aid', question: "Em caso de acidente com vítima, a primeira atitude a ser tomada é:", options: ["Remover a vítima do local imediatamente.","Oferecer água para a vítima se acalmar.","Verificar os riscos no local e sinalizar a área para evitar novos acidentes.","Tentar identificar o culpado pelo acidente."], answer: 2 },
+            { category: 'first-aid', question: "Ao socorrer um motociclista acidentado, o que NÃO se deve fazer?", options: ["Conversar com a vítima para mantê-la calma.","Verificar se a vítima está respirando.","Retirar o capacete da vítima.","Chamar o serviço de emergência (SAMU 192 ou Bombeiros 193)."], answer: 2 },
+            { category: 'first-aid', question: "Qual o método mais indicado para conter uma hemorragia externa?", options: ["Fazer um torniquete imediatamente.","Aplicar pó de café sobre o ferimento.","Lavar o local com água e sabão.","Fazer compressão direta sobre o ferimento com um pano limpo."], answer: 3 },
+            { category: 'first-aid', question: "Uma vítima de acidente de trânsito está com fumaça saindo do veículo. Se não houver risco pessoal, o socorrista deve:", options: ["Retirar a vítima de dentro do veículo o mais rápido possível.","Jogar água no motor para apagar o fogo.","Afastar-se e esperar os bombeiros.","Tentar abrir as portas para ventilar sem movimentar a vítima."], answer: 0 },
+            { category: 'first-aid', question: "Na maioria das regiões do Brasil, o telefone 192 corresponde ao:", options: ["Polícia Militar", "Corpo de Bombeiros", "Polícia Rodoviária Federal", "SAMU - Serviço de Atendimento Móvel de Urgência"], answer: 3 },
+            { category: 'environment', question: "Atirar lixo ou objetos pela janela do veículo é uma infração que:", options: ["Não causa problemas, pois as ruas são limpas regularmente.","Agride o meio ambiente, pode causar acidentes e é uma infração de trânsito.","É permitido, desde que seja em pequena quantidade.","É um ato de cidadania, pois gera empregos para os garis."], answer: 1 },
+            { category: 'environment', question: "O órgão responsável por estabelecer os limites de emissão de gases poluentes por veículos é o:", options: ["CONTRAN", "DETRAN", "DENATRAN", "CONAMA"], answer: 3 },
+            { category: 'environment', question: "A manutenção preventiva do veículo, como a troca de filtros e a regulagem do motor, contribui para:", options: ["Aumentar o consumo de combustível.","Piorar a qualidade do ar.","Diminuir a poluição do ar e sonora.","Aumentar o desgaste das peças."], answer: 2 },
+            { category: 'environment', question: "O que é cidadania no trânsito?", options: ["Apenas conhecer as leis de trânsito.","É o direito de usar as vias como quiser.","É respeitar os direitos e deveres de todos os usuários da via, colaborando para um trânsito seguro e humano.","É ter um veículo novo e potente."], answer: 2 },
+            { category: 'environment', question: "Qual o destino ambientalmente correto para pneus velhos?", options: ["Queimá-los em um terreno baldio.","Jogá-los em rios ou córregos.","Levá-los a pontos de coleta para reciclagem.","Deixá-los no acostamento da rodovia."], answer: 2 },
+            { category: 'mechanics', question: "A retirada do catalisador de um automóvel:", options: ["Melhora o desempenho do motor e economiza combustível.","É uma modificação permitida pelo CTB.","Aumenta a emissão de poluentes e é uma alteração proibida.","Não tem efeito sobre o meio ambiente."], answer: 2 },
+            { category: 'mechanics', question: "A luz de advertência da bateria acesa no painel com o motor em funcionamento indica um problema no:", options: ["Sistema de freios.","Alternador ou na correia que o movimenta.","Radiador.","Sistema de injeção eletrônica."], answer: 1 },
+            { category: 'mechanics', question: "Para garantir uma boa manutenção, os pneus devem ser calibrados:", options: ["Mensalmente, com os pneus quentes.","Apenas quando for fazer uma viagem longa.","Semanalmente, com os pneus frios.","Diariamente, com os pneus quentes."], answer: 2 },
+            { category: 'mechanics', question: "A função do sistema de arrefecimento (ou refrigeração) é:", options: ["Aquecer o motor rapidamente.","Filtrar o ar que vai para o motor.","Controlar a temperatura do motor, evitando o superaquecimento.","Lubrificar as partes móveis do motor."], answer: 2 },
+            { category: 'mechanics', question: "O sistema que tem a finalidade de transmitir a força do motor para as rodas é o de:", options: ["Suspensão", "Transmissão", "Freios", "Direção"], answer: 1 },
+            { category: 'legislation', question: "O painel de instrumentos do veículo serve para:", options: ["Apenas indicar a velocidade.","Avisar sobre o nível de combustível e a rotação do motor.","Informar o condutor sobre as condições de funcionamento do veículo.","Controlar o sistema de som."], answer: 2 },
+            { category: 'mechanics', question: "A função do silenciador no veículo é:", options: ["Aumentar a potência do motor.","Diminuir os ruídos gerados pela descarga dos gases do motor.","Economizar combustível.","Filtrar os gases do escapamento."], answer: 1 },
+            { category: 'mechanics', question: "A verificação do nível de óleo do motor deve ser feita:", options: ["Com o motor quente e em funcionamento.","A cada 6 meses, independentemente do uso.","Apenas nas revisões na concessionária.","Periodicamente, com o veículo em local plano e com o motor frio."], answer: 3 },
+            { category: 'mechanics', question: "O que o carburador, nos veículos mais antigos, foi substituído nos mais modernos?", options: ["Pela injeção eletrônica.","Pelo distribuidor.","Pela bobina.","Pelo alternador."], answer: 0 },
+            { category: 'defensive', question: "Vibrações no volante podem indicar problemas com:", options: ["O nível de óleo do motor.","A bateria do veículo.","O balanceamento das rodas.","O sistema de escapamento."], answer: 2 }
+        ];
+
+        // --- State ---
+        let currentQuestions = [];
+        let userAnswers = [];
+        let currentQuestionIndex = 0;
+        let timerInterval;
+        let quizFinished = false;
+        let reviewMode = false;
+        let userName = '';
+
+        // --- Functions ---
+        function shuffle(array) {
+            let currentIndex = array.length, randomIndex;
+            while (currentIndex !== 0) {
+                randomIndex = Math.floor(Math.random() * currentIndex);
+                currentIndex--;
+                [array[currentIndex], array[randomIndex]] = [array[randomIndex], array[currentIndex]];
+            }
+            return array;
+        }
+
+        function buildTestTypeOptions() {
+            testTypeSelection.innerHTML = '';
+            Object.keys(testTypes).forEach((key, index) => {
+                const config = testTypes[key];
+                const isChecked = index === 0 ? 'checked' : '';
+                const optionHTML = `
+                    <div>
+                        <input type="radio" name="test-type" id="${key}" value="${key}" class="hidden" ${isChecked}>
+                        <label for="${key}" class="test-type-card cursor-pointer block bg-white p-4 rounded-lg border-gray-200 shadow-sm text-center">
+                            <h3 class="font-bold text-lg text-slate-800">${config.title}</h3>
+                            <p class="text-sm text-slate-500">${config.description}</p>
+                        </label>
+                    </div>
+                `;
+                testTypeSelection.innerHTML += optionHTML;
+            });
+        }
+
+        function buildQuestionElements() {
+            questionsContainer.innerHTML = '';
+            currentQuestions.forEach((q, index) => {
+                const questionEl = document.createElement('div');
+                questionEl.className = 'question-card absolute top-0 left-0 w-full p-4 opacity-0 transition-opacity duration-300';
+                if (index !== 0) questionEl.classList.add('hidden');
+                questionEl.id = `question-${index}`;
+                
+                let optionsHTML = '';
+                q.options.forEach((option, i) => {
+                    optionsHTML += `
+                        <div>
+                            <input type="radio" name="question${index}" id="q${index}o${i}" value="${i}" class="hidden">
+                            <label for="q${index}o${i}" class="option-label block w-full p-4 border-2 border-slate-200 rounded-lg cursor-pointer">
+                                <div><span class="font-bold mr-3">${String.fromCharCode(65 + i)})</span> ${option}</div>
+                                <div class="check-icon"></div>
+                            </label>
+                        </div>
+                    `;
+                });
+
+                questionEl.innerHTML = `
+                    <p class="text-xl font-bold text-slate-900 mb-6">${index + 1}. ${q.question}</p>
+                    <div class="space-y-3">
+                        ${optionsHTML}
+                    </div>
+                `;
+                questionsContainer.appendChild(questionEl);
+            });
+        }
+
+        function setupQuiz() {
+            const selectedType = document.querySelector('input[name="test-type"]:checked').value;
+            selectedTestConfig = testTypes[selectedType];
+
+            const filteredQuestions = allQuestions.filter(q => selectedTestConfig.categories.includes(q.category));
+            currentQuestions = shuffle(filteredQuestions).slice(0, selectedTestConfig.totalQuestions);
+            
+            userAnswers = new Array(currentQuestions.length).fill(null);
+            currentQuestionIndex = 0;
+            quizFinished = false;
+            reviewMode = false;
+            
+            buildQuestionElements();
+            buildNavGrid();
+            addOptionListeners();
+            displayQuestion(0);
+            
+            submitBtn.disabled = false;
+            submitBtn.classList.remove('hidden');
+        }
+
+        function buildNavGrid() {
+            questionNavGrid.innerHTML = '';
+            for (let i = 0; i < currentQuestions.length; i++) {
+                const navBtn = document.createElement('button');
+                navBtn.className = 'nav-btn';
+                navBtn.textContent = String(i + 1).padStart(2, '0');
+                navBtn.dataset.index = i;
+                navBtn.addEventListener('click', () => {
+                    displayQuestion(i);
+                });
+                questionNavGrid.appendChild(navBtn);
+            }
+        }
+
+        function addOptionListeners() {
+            questionsContainer.querySelectorAll('input[type="radio"]').forEach(radio => {
+                radio.addEventListener('change', (e) => {
+                    if (reviewMode) return;
+                    const questionIndex = parseInt(e.target.name.replace('question', ''));
+                    userAnswers[questionIndex] = parseInt(e.target.value);
+                    
+                    const labels = document.querySelectorAll(`#question-${questionIndex} .option-label`);
+                    labels.forEach(label => {
+                        label.classList.remove('selected');
+                        label.querySelector('.check-icon').innerHTML = '';
+                    });
+                    const selectedLabel = document.querySelector(`label[for="${e.target.id}"]`);
+                    selectedLabel.classList.add('selected');
+                    selectedLabel.querySelector('.check-icon').innerHTML = checkSVG;
+                    
+                    updateNavGrid();
+                });
+            });
+        }
+
+        function displayQuestion(index) {
+            if (index < 0 || index >= currentQuestions.length) return;
+
+            const currentCard = document.getElementById(`question-${currentQuestionIndex}`);
+            if (currentCard && currentQuestionIndex !== index) {
+                currentCard.classList.add('opacity-0');
+                setTimeout(() => currentCard.classList.add('hidden'), 300);
+            }
+
+            currentQuestionIndex = index;
+            const nextCard = document.getElementById(`question-${currentQuestionIndex}`);
+            if (nextCard) {
+                const radioValue = userAnswers[currentQuestionIndex];
+                if (radioValue !== null) {
+                    const radioToSelect = nextCard.querySelector(`input[value="${radioValue}"]`);
+                    if (radioToSelect) {
+                        radioToSelect.checked = true;
+                    }
+                }
+                nextCard.classList.remove('hidden');
+                setTimeout(() => nextCard.classList.remove('opacity-0'), 10);
+            }
+            
+            updateNavGrid();
+            updateNavButtons();
+        }
+        
+        function updateNavGrid() {
+            const navBtns = questionNavGrid.querySelectorAll('.nav-btn');
+            navBtns.forEach((btn, index) => {
+                btn.classList.remove('not-answered', 'current', 'answered');
+                if (index === currentQuestionIndex) {
+                    btn.classList.add('current');
+                } else if (userAnswers[index] !== null) {
+                    btn.classList.add('answered');
+                } else {
+                    btn.classList.add('not-answered');
+                }
+            });
+        }
+
+        function updateNavButtons() {
+            prevBtn.disabled = currentQuestionIndex === 0;
+            nextBtn.disabled = currentQuestionIndex === currentQuestions.length - 1;
+        }
+
+        function startTimer(duration) {
+            let timer = duration;
+            timerInterval = setInterval(() => {
+                const minutes = String(Math.floor(timer / 60)).padStart(2, '0');
+                const seconds = String(timer % 60).padStart(2, '0');
+                timerEl.textContent = `${minutes}:${seconds}`;
+                if (--timer < 0) {
+                    clearInterval(timerInterval);
+                    finishQuiz();
+                }
+            }, 1000);
+        }
+
+        function finishQuiz() {
+            if (quizFinished) return;
+            quizFinished = true;
+            clearInterval(timerInterval);
+
+            let correctCount = 0;
+            currentQuestions.forEach((q, index) => {
+                if (userAnswers[index] === q.answer) {
+                    correctCount++;
+                }
+            });
+
+            const percentage = Math.round((correctCount / currentQuestions.length) * 100);
+            const passed = correctCount >= selectedTestConfig.passingScore;
+
+            document.getElementById('score').textContent = `${percentage}%`;
+            scoreCircle.style.setProperty('--p', `${percentage}%`);
+            if (passed) {
+                scoreCircle.style.setProperty('background', `conic-gradient(#22c55e ${percentage}%, #e5e7eb 0)`);
+            } else {
+                scoreCircle.style.setProperty('background', `conic-gradient(#ef4444 ${percentage}%, #e5e7eb 0)`);
+            }
+
+            totalQuestionsSummary.textContent = selectedTestConfig.totalQuestions;
+            document.getElementById('correct-answers').textContent = correctCount;
+            document.getElementById('incorrect-answers').textContent = currentQuestions.length - correctCount;
+
+            const resultTitle = document.getElementById('result-title');
+            const resultMessage = document.getElementById('result-message');
+            
+            if (passed) {
+                resultIcon.innerHTML = trophySVG;
+                resultTitle.textContent = `Parabéns, ${userName}!`;
+                resultTitle.className = "text-4xl font-extrabold mb-2 text-green-600";
+                resultMessage.textContent = "Excelente desempenho! Você está pronto para a prova oficial.";
+                reprovadoDicas.classList.add('hidden');
+            } else {
+                resultIcon.innerHTML = sadFaceSVG;
+                resultTitle.textContent = `Continue estudando, ${userName}!`;
+                resultTitle.className = "text-4xl font-extrabold mb-2 text-red-600";
+                
+                const motivationalPhrases = [
+                    "A persistência é o caminho do êxito.",
+                    "Cada erro é um passo para mais perto do acerto.",
+                    "A jornada é feita de altos e baixos. Continue focado!",
+                    "O sucesso é a soma de pequenos esforços repetidos."
+                ];
+                const randomPhrase = motivationalPhrases[Math.floor(Math.random() * motivationalPhrases.length)];
+                resultMessage.textContent = `Não desanime. ${randomPhrase}`;
+                reprovadoDicas.classList.remove('hidden');
+            }
+            
+            quizScreen.classList.add('hidden');
+            resultScreen.classList.remove('hidden');
+        }
+        
+        function showReview() {
+            reviewMode = true;
+            quizScreen.classList.remove('hidden');
+            resultScreen.classList.add('hidden');
+            submitBtn.classList.add('hidden');
+            
+            currentQuestions.forEach((q, index) => {
+                const questionEl = document.getElementById(`question-${index}`);
+                const inputs = questionEl.querySelectorAll('input[type="radio"]');
+                inputs.forEach(input => input.disabled = true);
+
+                const options = questionEl.querySelectorAll('.option-label');
+                options.forEach((optLabel, i) => {
+                    optLabel.classList.remove('selected', 'hover:bg-slate-50');
+                    optLabel.style.cursor = 'default';
+                    const iconContainer = optLabel.querySelector('.check-icon');
+                    iconContainer.innerHTML = '';
+
+                    if (i === q.answer) {
+                        optLabel.classList.add('correct');
+                        if (userAnswers[index] === i) {
+                           iconContainer.innerHTML = correctSVG;
+                        }
+                    } else if (userAnswers[index] === i) {
+                        optLabel.classList.add('incorrect');
+                        iconContainer.innerHTML = incorrectSVG;
+                    }
+                });
+            });
+            displayQuestion(0);
+        }
+
+        // --- Event Listeners ---
+        startBtn.addEventListener('click', () => {
+            userName = nameInput.value.trim();
+            if (userName === '') {
+                userName = 'Candidato(a)';
+            }
+
+            startScreen.classList.add('hidden');
+            quizScreen.classList.remove('hidden');
+            setupQuiz();
+            startTimer(selectedTestConfig.time);
+        });
+
+        submitBtn.addEventListener('click', () => {
+            const unanswered = userAnswers.filter(a => a === null).length;
+            if (unanswered > 0) {
+                if (confirm(`Você ainda tem ${unanswered} questões não respondidas. Deseja entregar a prova mesmo assim?`)) {
+                    finishQuiz();
+                }
+            } else {
+                if (confirm('Tem certeza que deseja entregar a prova?')) {
+                    finishQuiz();
+                }
+            }
+        });
+
+        restartBtn.addEventListener('click', () => {
+            resultScreen.classList.add('hidden');
+            startScreen.classList.remove('hidden');
+        });
+        
+        reviewBtn.addEventListener('click', () => {
+            showReview();
+        });
+
+        prevBtn.addEventListener('click', () => displayQuestion(currentQuestionIndex - 1));
+        nextBtn.addEventListener('click', () => displayQuestion(currentQuestionIndex + 1));
+
+        // --- Initial Load ---
+        document.addEventListener('DOMContentLoaded', () => {
+            buildTestTypeOptions();
+        });
+
+    </script>
+</body>
+</ht
