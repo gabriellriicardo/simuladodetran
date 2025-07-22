@@ -1,0 +1,332 @@
+[
+  {
+    "category": "mechanics",
+    "question": "1. A retirada do catalisador de um automóvel:",
+    "options": [
+      "Diminui consumo do combustível.",
+      "É proibida.",
+      "É possível, desde que se instale a injeção eletrônica.",
+      "Melhora a qualidade dos gases do escapamento."
+    ],
+    "answer": 1
+  },
+  {
+    "category": "mechanics",
+    "question": "2. O componente do motor que não é considerado elemento fixo é o:",
+    "options": [
+      "Cárter.",
+      "Bloco.",
+      "Comando de válvulas.",
+      "Cabeçote."
+    ],
+    "answer": 2
+  },
+  {
+    "category": "mechanics",
+    "question": "3. O catalisador é um equipamento que serve para:",
+    "options": [
+      "Aumentar ou reduzir a velocidade do motor no momento da mudança de marcha.",
+      "Fornecer à bateria uma corrente elétrica para repor a energia consumida durante o funcionamento do veículo.",
+      "Reduzir a poluição atmosférica, transformando os gases emitidos pelos veículos em substâncias menos tóxicas.",
+      "Fornecer à bateria uma corrente elétrica para repor a energia consumida durante o funcionamento do veículo."
+    ],
+    "answer": 2
+  },
+  {
+    "category": "mechanics",
+    "question": "4. O sistema que permite a redução do atrito entre as placas móveis do motor é o sistema de:",
+    "options": [
+      "Suspensão.",
+      "Alimentação.",
+      "Ignição.",
+      "Lubrificação."
+    ],
+    "answer": 3
+  },
+  {
+    "category": "mechanics",
+    "question": "5. O velocímetro é importante para o motorista porque:",
+    "options": [
+      "Indica a velocidade desenvolvida pelo veículo.",
+      "Indica a quilometragem percorrida pelo veículo.",
+      "Impede que o veículo atinja uma velocidade superior a 80km/h.",
+      "Permite ao condutor diminuir a velocidade do veículo e fazer a mudança das marchas."
+    ],
+    "answer": 0
+  },
+  {
+    "category": "mechanics",
+    "question": "6. O próprio condutor pode observar o funcionamento de seu veículo, seja pelas indicações do painel ou por uma inspeção visual simples. Assim, qualquer condutor pode inspecionar:",
+    "options": [
+      "Nos veículos refigerados à água, deve-se observar o nível do reservatório de água do radiador.",
+      "O funcionamento dos faróis, verificando visualmente se todas as luzes estão acendendo quando acionadas.",
+      "O nivel de óleo.",
+      "Todas as alternativas estão corretas."
+    ],
+    "answer": 3
+  },
+  {
+    "category": "mechanics",
+    "question": "7. O condutor deve-se manter alerta em relação ao correto funcionamento do veículo para trafegar com segurança. Assim, deve saber que vibrações do volante indicam possíveis problemas com:",
+    "options": [
+      "O balanceamento das rodas.",
+      "Curso excessivo ou folga do pedal de freio de serviço.",
+      "O sistema de ar comprimido da direção.",
+      "A regulagem do circuito de freio."
+    ],
+    "answer": 0
+  },
+  {
+    "category": "mechanics",
+    "question": "8. A luz indicadora de carga de bateria no painel de um veículo permanece acesa com o motor em funcionamento. Este dado pode indicar que:",
+    "options": [
+      "A bateria necessita de manutenção.",
+      "O painel está com problemas elétricos.",
+      "O alternador está com problemas.",
+      "A bateria está descarregada."
+    ],
+    "answer": 2
+  },
+  {
+    "category": "mechanics",
+    "question": "9. De acordo com o Código de Trânsito Brasileiro, NÃO é equipamento obrigatório dos veículos automotores:",
+    "options": [
+      "Farol de milha.",
+      "Cinto de segurança.",
+      "Encosto de cabeça.",
+      "Dispositivo destinado ao controle de emissão de gases poluentes."
+    ],
+    "answer": 0
+  },
+  {
+    "category": "mechanics",
+    "question": "10. O registrador instantâneo e inalterável de velocidade e tempo (tacógrafo) é equipamento obrigatório para:",
+    "options": [
+      "Todos os tipos de veículos de transporte de passageiros.",
+      "Os veículos de transporte de passageiros com mais de 10 lugares.",
+      "Os veículos de transporte de escolares, caso possuam mais de 20 lugares.",
+      "Todos os veículos de carga."
+    ],
+    "answer": 1
+  },
+  {
+    "category": "mechanics",
+    "question": "11. Equipando seu carro com pneus mais largos do que os originais, o condutor terá um veículo:",
+    "options": [
+      "Mais veloz na reta.",
+      "Menos econômico.",
+      "Com menor estabilidade.",
+      "Mais bonito."
+    ],
+    "answer": 1
+  },
+  {
+    "category": "mechanics",
+    "question": "12. A função do silenciador no veículo é:",
+    "options": [
+      "Diminuir os ruídos vindos da descarga dos gases gerados pelo motor.",
+      "Permitir uma partida suave do veículo.",
+      "Reduzir os níveis de emissão de gases.",
+      "Fornecer a corrente elétrica para o distribuidor."
+    ],
+    "answer": 0
+  },
+  {
+    "category": "mechanics",
+    "question": "13. Qual dos tipos de extintores de incêndio veicular abaixo é adequado para apagar fogo em componentes de tapeçaria, painéis, bancos e carroçaria?",
+    "options": [
+      "BC.",
+      "AC;",
+      "ABC;",
+      "AB;"
+    ],
+    "answer": 2
+  },
+  {
+    "category": "mechanics",
+    "question": "14. O freio de estacionamento é ativado:",
+    "options": [
+      "No eixo cardã.",
+      "Nas rodas dianteiras.",
+      "No motor.",
+      "Nas rodas traseiras."
+    ],
+    "answer": 3
+  },
+  {
+    "category": "mechanics",
+    "question": "15. A estabilidade do veículo também está relacionada com os pneus. O condutor deve conferir periodicamente:",
+    "options": [
+      "A calibragem dos pneus.",
+      "A existência de possíveis deformações na carcaça.",
+      "O desgaste dos pneus.",
+      "Todas as alternativas estão corretas."
+    ],
+    "answer": 3
+  },
+  {
+    "category": "mechanics",
+    "question": "16. A manutenção periódica e preventiva do veículo deve incluir o sistema de iluminação. Assim, todo condutor deve saber que faróis queimados ou desalinhados:",
+    "options": [
+      "Desgastam prematuramente os fusíveis do painel do sistema de iluminação.",
+      "Impedem a dirigibilidade do veículo.",
+      "Reduzem a visibilidade panorâmica.",
+      "Dificultam aos demais condutores o reconhecimento de suas intenções de manobra."
+    ],
+    "answer": 2
+  },
+  {
+    "category": "mechanics",
+    "question": "17. Ao fazer uma inspeção dos cintos de segurança do veículo, o condutor NÃO deve:",
+    "options": [
+      "Verificar se os cintos não tem cortes, para não romperem numa emergência.",
+      "Testar o travamento para avaliar se está funcionando perfeitamente.",
+      "Deixar de conferir se existem dobras que impeçam o perfeito funcionamento.",
+      "Verificar se há cintos disponíveis para utilização de todos os ocupantes do veículo."
+    ],
+    "answer": 2
+  },
+  {
+    "category": "mechanics",
+    "question": "18. Quanto ao uso de extintor de incêndio. É FALSO afirmar:",
+    "options": [
+      "Um extintor está carregado quando o ponteiro de medidor de pressão está na área vermelha.",
+      "O extintor deve ser usado fazendo-se movimentos em forma de leque.",
+      "O jato do extintor deve ser dirigido para a base das chamas.",
+      "Empregar, se possível, vários extintores ao mesmo tempo."
+    ],
+    "answer": 0
+  },
+  {
+    "category": "mechanics",
+    "question": "19. Não devemos sobrecarregar o sistema de freios, pisando constantemente no pedal de acionamento, pois isto provocará superaquecimento, causando:",
+    "options": [
+      "Aumento do desgaste das pastilhas e na distância de frenagem.",
+      "Desgaste discreto das pastilhas e diminuição na distância de frenagem.",
+      "Baixa durabilidade da suspensão dianteira e redução da distância de frenagem.",
+      "Diminuição do desgaste das pastilhas e na distância de frenagem."
+    ],
+    "answer": 0
+  },
+  {
+    "category": "mechanics",
+    "question": "20. O filtro de ar deve ser trocado a fim de evitar:",
+    "options": [
+      "Ressecamento da correia do gerador.",
+      "Aumento no consumo de combustível.",
+      "Vazamento no sistema de combustível do motor.",
+      "Vibraçoes nas rodas."
+    ],
+    "answer": 1
+  },
+  {
+    "category": "mechanics",
+    "question": "21. O carburador, nos veículos mais modernos, é substituído por:",
+    "options": [
+      "Injeção eletrônica.",
+      "Bomba de alimentação.",
+      "Distribuidor e bobina.",
+      "Ignição eletrônica."
+    ],
+    "answer": 0
+  },
+  {
+    "category": "mechanics",
+    "question": "22. Os pneus do eixo de tração desgastam mais rapidamente. Para igualar o desgaste do conjunto de pneus do veículo, deve-se efetuar:",
+    "options": [
+      "O alinhamento dos pneus.",
+      "O rodízio dos pneus.",
+      "A troca de ar dos pneus.",
+      "A calibragem dos pneus."
+    ],
+    "answer": 1
+  },
+  {
+    "category": "mechanics",
+    "question": "23. A finalidade do sistema de transmissão é:",
+    "options": [
+      "Controlar a temperatura do motor.",
+      "Evitar o desgaste das peças.",
+      "Trasmitir os movimentos do veículo, esquerda e direita.",
+      "Transmitir a força do motor às rodas."
+    ],
+    "answer": 3
+  },
+  {
+    "category": "mechanics",
+    "question": "24. A verificação do nível de óleo do motor deve ser:",
+    "options": [
+      "Periodicamente, dependendo do uso.",
+      "A cada 30 dias.",
+      "A cada troca de óleo.",
+      "A cada 15 dias."
+    ],
+    "answer": 0
+  },
+  {
+    "category": "mechanics",
+    "question": "25. Conduzir veículo com pneus descalibrados acarreta:",
+    "options": [
+      "perda de aderência.",
+      "desgaste diferenciado dos pneus.",
+      "consumo excessivo de combustível.",
+      "todas as alternativas estão corretas."
+    ],
+    "answer": 3
+  },
+  {
+    "category": "mechanics",
+    "question": "26. Considerando o uso de baterias em veículos automotores, é verdadeiro afirmar que:",
+    "options": [
+      "Ao ligar a bateria, deve-se pôr em funcionamento, primeiramente, o cabo positivo e depois conectar o negativo.",
+      "A bateria deve ser limpa a cada dois anos.",
+      "Não se deve permitir a oxidação nos pólos e cabos das baterias.",
+      "A bateria do veículo nunca deve ser trocada, apenas recarregada."
+    ],
+    "answer": 2
+  },
+  {
+    "category": "mechanics",
+    "question": "27. Quando a luz do painel relacionada à bateria acende, pode está acontecendo:",
+    "options": [
+      "O amperímetro acusando o nível baixo da água no radiador.",
+      "O não funcionamento do alternador ou a correia do alternador estar quebrada.",
+      "O termômetro indicando descarga da bateria.",
+      "Um superaquecimento no motor."
+    ],
+    "answer": 1
+  },
+  {
+    "category": "mechanics",
+    "question": "28. A energia elétrica do veículo é armazenada e distribuída:",
+    "options": [
+      "Nos fusíveis.",
+      "Na bateria.",
+      "No radiador.",
+      "No alternador."
+    ],
+    "answer": 1
+  },
+  {
+    "category": "mechanics",
+    "question": "29. Para garantir boa manutenção, os pneus devem ser calibrados:",
+    "options": [
+      "Semanalmente, com os pneus aquecidos.",
+      "Semanalmente, com os pneus frios.",
+      "Diariamente, com os pneus aquecidos.",
+      "Mensalmente, não importa se os pneus estão frios ou aquecidos."
+    ],
+    "answer": 1
+  },
+  {
+    "category": "mechanics",
+    "question": "30. A combustão do veículo ocorre no:",
+    "options": [
+      "Pistão.",
+      "Cabeçote",
+      "Cilindro.",
+      "Biela."
+    ],
+    "answer": 2
+  }
+]

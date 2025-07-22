@@ -1,0 +1,62 @@
+[
+  {
+    "category": "signs",
+    "question": "O que a placa A-1a adverte?",
+    "image": "placas/A-1a.png",
+    "options": [
+      "Curva à esquerda.",
+      "Curva acentuada à esquerda.",
+      "Curva acentuada em “S” à esquerda.",
+      "Vire à esquerda."
+    ],
+    "answer": 1
+  },
+  {
+    "category": "signs",
+    "question": "Diante da placa SVA-07, o que você entende que o local oferece?",
+    "image": "placas/SVA-07.png",
+    "options": [
+      "Loja de ferramentas.",
+      "Sanitários.",
+      "Serviço mecânico.",
+      "Aeroporto nas proximidades."
+    ],
+    "answer": 2
+  },
+  {
+    "category": "signs",
+    "question": "O que a placa R-24b regulamenta?",
+    "image": "placas/R-24b.png",
+    "options": [
+      "Passagem obrigatória.",
+      "Sentido de circulação da via.",
+      "Sentido único.",
+      "Siga em frente."
+    ],
+    "answer": 0
+  },
+  {
+    "category": "signs",
+    "question": "O que a placa A-4b adverte?",
+    "image": "placas/A-4b.png",
+    "options": [
+      "Curva acentuada em “S“ à esquerda.",
+      "Curva acentuada em “S“ à direita.",
+      "Curva acentuada à direita.",
+      "Pista sinuosa à direita."
+    ],
+    "answer": 3
+  },
+  {
+    "category": "signs",
+    "question": "O que a placa R-2 regulamenta?",
+    "image": "placas/R-2.png",
+    "options": [
+      "Parada obrigatória à frente.",
+      "Alfândega.",
+      "Dê a preferência.",
+      "Parada obrigatória."
+    ],
+    "answer": 2
+  }
+]

@@ -1,0 +1,332 @@
+[
+  {
+    "category": "legislation",
+    "question": "Qual é o órgão máximo normativo, consultivo e coordenador do Sistema Nacional de Trânsito (SNT)?",
+    "options": [
+      "DETRAN (Departamento Estadual de Trânsito)",
+      "SENATRAN (Secretaria Nacional de Trânsito)",
+      "CONTRAN (Conselho Nacional de Trânsito)",
+      "PRF (Polícia Rodoviária Federal)"
+    ],
+    "answer": 2
+  },
+  {
+    "category": "legislation",
+    "question": "Deixar o condutor de usar o cinto de segurança, conforme previsto no CTB, é uma infração:",
+    "options": [
+      "Leve, com multa.",
+      "Média, com multa.",
+      "Grave, com multa e retenção do veículo.",
+      "Gravíssima, com multa."
+    ],
+    "answer": 2
+  },
+  {
+    "category": "legislation",
+    "question": "A Categoria 'B' da Carteira Nacional de Habilitação (CNH) permite ao condutor conduzir:",
+    "options": [
+      "Veículos de duas ou três rodas.",
+      "Veículos motorizados cujo peso bruto total não exceda a 3.500 kg e cuja lotação não exceda a 8 lugares, excluído o do motorista.",
+      "Veículos utilizados em transporte de carga, cujo peso bruto total exceda a 3.500 kg.",
+      "Veículos utilizados no transporte de passageiros, cuja lotação exceda a 8 lugares."
+    ],
+    "answer": 1
+  },
+  {
+    "category": "legislation",
+    "question": "As placas de sinalização que têm por finalidade alertar os usuários da via para condições potencialmente perigosas são as de:",
+    "options": [
+      "Regulamentação",
+      "Advertência",
+      "Indicação",
+      "Serviços Auxiliares"
+    ],
+    "answer": 1
+  },
+  {
+    "category": "legislation",
+    "question": "Em uma via urbana sem sinalização de velocidade, qual o limite máximo para uma via arterial?",
+    "options": [
+      "40 km/h",
+      "50 km/h",
+      "60 km/h",
+      "80 km/h"
+    ],
+    "answer": 2
+  },
+  {
+    "category": "legislation",
+    "question": "A penalidade de suspensão do direito de dirigir será aplicada quando o condutor atingir, no período de 12 meses, a seguinte pontuação:",
+    "options": [
+      "10 pontos, independentemente da gravidade das infrações",
+      "20 pontos, caso constem 2 ou mais infrações gravíssimas",
+      "30 pontos, caso conste 1 infração gravíssima",
+      "Todas as alternativas estão corretas, conforme as novas regras."
+    ],
+    "answer": 3
+  },
+  {
+    "category": "legislation",
+    "question": "Uma linha dupla contínua na cor amarela, dividindo a pista de rolamento, significa que:",
+    "options": [
+      "A ultrapassagem é permitida para os dois sentidos.",
+      "A ultrapassagem é permitida apenas para um dos sentidos.",
+      "É proibida a ultrapassagem para os dois sentidos.",
+      "É uma área de estacionamento permitido."
+    ],
+    "answer": 2
+  },
+  {
+    "category": "legislation",
+    "question": "O documento de porte obrigatório para a condução do veículo é:",
+    "options": [
+      "O Certificado de Registro de Veículo (CRV).",
+      "O Certificado de Registro e Licenciamento de Veículo (CRLV) ou sua versão digital.",
+      "A nota fiscal de compra e venda do veículo.",
+      "O comprovante de pagamento do IPVA."
+    ],
+    "answer": 1
+  },
+  {
+    "category": "legislation",
+    "question": "Dirigir sob a influência de álcool é uma infração gravíssima, que resulta em:",
+    "options": [
+      "Multa e advertência por escrito.",
+      "Multa (multiplicada por 10) e suspensão do direito de dirigir por 12 meses.",
+      "Apenas multa, sem suspensão.",
+      "Suspensão do direito de dirigir por 30 dias."
+    ],
+    "answer": 1
+  },
+  {
+    "category": "legislation",
+    "question": "Ao se aproximar de um cruzamento não sinalizado, a preferência de passagem é do veículo que:",
+    "options": [
+      "Estiver à direita do condutor.",
+      "Estiver em maior velocidade.",
+      "For de maior porte.",
+      "Sinalizar primeiro sua intenção."
+    ],
+    "answer": 0
+  },
+  {
+    "category": "legislation",
+    "question": "A Permissão para Dirigir (PPD) tem validade de:",
+    "options": [
+      "6 meses",
+      "1 ano",
+      "2 anos",
+      "O mesmo período da CNH definitiva."
+    ],
+    "answer": 1
+  },
+  {
+    "category": "legislation",
+    "question": "Transportar crianças em veículo automotor sem observância das normas de segurança especiais estabelecidas pelo CTB é infração:",
+    "options": [
+      "Média",
+      "Grave",
+      "Gravíssima",
+      "Leve"
+    ],
+    "answer": 2
+  },
+  {
+    "category": "legislation",
+    "question": "A distância que se deve guardar ao ultrapassar um ciclista é de:",
+    "options": [
+      "1,0 metro",
+      "1,5 metros",
+      "2,0 metros",
+      "A distância de uma porta aberta."
+    ],
+    "answer": 1
+  },
+  {
+    "category": "legislation",
+    "question": "O condutor que tiver sua CNH cassada poderá requerer sua reabilitação após:",
+    "options": [
+      "6 meses",
+      "1 ano",
+      "2 anos",
+      "5 anos"
+    ],
+    "answer": 2
+  },
+  {
+    "category": "legislation",
+    "question": "A luz do semáforo na cor amarela indica:",
+    "options": [
+      "Permissão para prosseguir.",
+      "Parada obrigatória.",
+      "Atenção, sinalizando que o sinal mudará para vermelho.",
+      "Permissão para pedestres atravessarem."
+    ],
+    "answer": 2
+  },
+  {
+    "category": "legislation",
+    "question": "Estacionar o veículo a menos de cinco metros da esquina é uma infração:",
+    "options": [
+      "Leve",
+      "Média",
+      "Grave",
+      "Gravíssima"
+    ],
+    "answer": 1
+  },
+  {
+    "category": "legislation",
+    "question": "Os veículos de emergência (polícia, ambulância, bombeiros) têm prioridade de passagem quando:",
+    "options": [
+      "Em qualquer situação.",
+      "Apenas em vias expressas.",
+      "Estão em serviço de urgência e devidamente identificados por dispositivos sonoros e de iluminação.",
+      "Apenas durante a noite."
+    ],
+    "answer": 2
+  },
+  {
+    "category": "legislation",
+    "question": "Qual é a medida administrativa aplicada quando o veículo não está devidamente licenciado?",
+    "options": [
+      "Advertência por escrito.",
+      "Apenas multa.",
+      "Recolhimento da CNH.",
+      "Remoção do veículo."
+    ],
+    "answer": 3
+  },
+  {
+    "category": "legislation",
+    "question": "O uso da buzina de forma prolongada e sucessiva a qualquer pretexto é uma infração:",
+    "options": [
+      "Leve",
+      "Média",
+      "Grave",
+      "Não é infração."
+    ],
+    "answer": 0
+  },
+  {
+    "category": "legislation",
+    "question": "Compete aos órgãos e entidades executivos de trânsito dos Estados e do Distrito Federal, no âmbito de sua circunscrição:",
+    "options": [
+      "Criar normas de trânsito.",
+      "Julgar os recursos de infrações em última instância.",
+      "Realizar, fiscalizar e controlar o processo de formação de condutores e registrar veículos.",
+      "Patrulhar as rodovias federais."
+    ],
+    "answer": 2
+  },
+  {
+    "category": "legislation",
+    "question": "Transitar com o farol desregulado ou com o facho de luz alta de forma a perturbar a visão de outro condutor é uma infração:",
+    "options": [
+      "Leve",
+      "Média",
+      "Grave",
+      "Gravíssima"
+    ],
+    "answer": 2
+  },
+  {
+    "category": "legislation",
+    "question": "De acordo com o CTB, a ultrapassagem em pontes, viadutos e túneis é:",
+    "options": [
+      "Permitida, com cautela.",
+      "Permitida apenas para veículos de passeio.",
+      "Proibida, salvo onde houver sinalização que a permita.",
+      "Permitida apenas durante o dia."
+    ],
+    "answer": 2
+  },
+  {
+    "category": "legislation",
+    "question": "Conforme as novas regras de renovação da CNH, condutores com idade inferior a 50 anos devem renovar o exame de aptidão física e mental a cada:",
+    "options": [
+      "3 anos",
+      "5 anos",
+      "7 anos",
+      "10 anos"
+    ],
+    "answer": 3
+  },
+  {
+    "category": "legislation",
+    "question": "A placa de 'Parada Obrigatória' (R-1) tem o formato:",
+    "options": [
+      "Circular",
+      "Triangular",
+      "Octogonal",
+      "Quadrado"
+    ],
+    "answer": 2
+  },
+  {
+    "category": "legislation",
+    "question": "O condutor, ao ser ultrapassado, deverá:",
+    "options": [
+      "Acelerar o veículo.",
+      "Manter-se na sua faixa e facilitar a ultrapassagem.",
+      "Deslocar-se para a faixa da esquerda.",
+      "Ligar o pisca-alerta."
+    ],
+    "answer": 1
+  },
+  {
+    "category": "legislation",
+    "question": "A velocidade mínima permitida em uma via não poderá ser inferior a:",
+    "options": [
+      "Um terço da velocidade máxima.",
+      "Um quarto da velocidade máxima.",
+      "Metade da velocidade máxima.",
+      "20 km/h em qualquer situação."
+    ],
+    "answer": 2
+  },
+  {
+    "category": "legislation",
+    "question": "O pedestre tem preferência de passagem sobre os veículos:",
+    "options": [
+      "Sempre.",
+      "Apenas em semáforos.",
+      "Quando estiver na faixa de pedestres e não houver sinalização semafórica.",
+      "Apenas quando o veículo estiver em baixa velocidade."
+    ],
+    "answer": 2
+  },
+  {
+    "category": "legislation",
+    "question": "Deixar de manter a placa traseira do veículo iluminada, à noite, é uma infração:",
+    "options": [
+      "Leve",
+      "Média",
+      "Grave",
+      "Não é infração."
+    ],
+    "answer": 1
+  },
+  {
+    "category": "legislation",
+    "question": "Em caso de acidente com vítima, deixar de prestar ou providenciar socorro, podendo fazê-lo sem risco pessoal, é uma infração:",
+    "options": [
+      "Grave, com multa.",
+      "Média, com multa e suspensão.",
+      "Gravíssima, com multa (multiplicada por 5) e suspensão do direito de dirigir.",
+      "Leve, com advertência."
+    ],
+    "answer": 2
+  },
+  {
+    "category": "legislation",
+    "question": "O extintor de incêndio, para carros de passeio, utilitários e camionetes:",
+    "options": [
+      "É equipamento obrigatório.",
+      "É equipamento facultativo (não obrigatório).",
+      "É obrigatório apenas para veículos fabricados antes de 2015.",
+      "É obrigatório apenas para veículos a diesel."
+    ],
+    "answer": 1
+  }
+]

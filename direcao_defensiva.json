@@ -1,0 +1,332 @@
+[
+  {
+    "category": "defensive",
+    "question": "1Nos casos de acidentes em que o condutor, por vontade própria, desrespeitou a sinalização, bem como não teve a habilidade de evitá-lo, ocorreu:",
+    "options": [
+      "Negligência.",
+      "Somente imperícia.",
+      "Somente imprudência.",
+      "Imprudência e imperícia."
+    ],
+    "answer": 0
+  },
+  {
+    "category": "defensive",
+    "question": "2Certas manobras são proibidas para vias de pista única e duplo sentido, em função da segurança. Não faz parte dos conceitos de direção defensiva:",
+    "options": [
+      "Não se deve reduzir a velocidade para acessar o acostamento.",
+      "Não se deve ultrapassar em pontes e viadutos.",
+      "Deve-se sempre manter distância do carro à frente.",
+      "Para fazer retorno, deve-se aguardar uma oportunidade no acostamento."
+    ],
+    "answer": 0
+  },
+  {
+    "category": "defensive",
+    "question": "3A chuva reduz a visibilidade e a aderência do veículo em relação à pista. Para aumentar a segurança em caso de chuva numa rodovia, o condutor deve:",
+    "options": [
+      "Manter a velocidade em 50 km/h, aumentar a distância do veículo à frente e ligar o pisca alerta.",
+      "Reduzir a velocidade, aumentar a distância do veículo à frente e acender o farol baixo.",
+      "Reduzir a velocidade, aumentar a distância do veículo à frente e acender o farol alto.",
+      "Reduzir a velocidade, reduzir a distância do veículo à frente e acender o farol baixo."
+    ],
+    "answer": 1
+  },
+  {
+    "category": "defensive",
+    "question": "4Sob neblina ou cerração, o condutor manterá acesas pelo menos as luzes:",
+    "options": [
+      "Altas dos faróis do veículo.",
+      "Dos faróis de longa distância (faróis de milha) do veículo.",
+      "De emergência (pisca-alerta) do veículo.",
+      "De posição do veículo."
+    ],
+    "answer": 3
+  },
+  {
+    "category": "defensive",
+    "question": "5O condutor defensivo, antes de realizar uma ultrapassagem, deve:",
+    "options": [
+      "Reduzir a velocidade e reduzir a distância de visibilidade.",
+      "Indicar com antecedência seu propósito, por meio de luz indicadora de direção.",
+      "Esperar o outro veículo reduzir a velocidade.",
+      "Indicar com antecedência seu propósito, por meio de sucessivos toques na buzina."
+    ],
+    "answer": 1
+  },
+  {
+    "category": "defensive",
+    "question": "6Ter domínio a respeito da sinalização faz parte da direção defensiva. Assim, o condutor deve saber que em acostamentos é proibido:",
+    "options": [
+      "O tráfego de veículos automotores.",
+      "A parada de veículos, exceto em situação de emergência.",
+      "O tráfego de pedestres.",
+      "O estacionamento de veículos, exceto em situação de emergência."
+    ],
+    "answer": 0
+  },
+  {
+    "category": "defensive",
+    "question": "7A velocidade que permite, ao motorista, uma reação que evite atingir um obstáculo, um pedestre ou outro veículo é:",
+    "options": [
+      "Máxima permitida para a via onde está circulando.",
+      "Acima de 60 (sessenta) km/h.",
+      "Máxima de 80 (oitenta) km/h de acordo com a legislação de trânsito.",
+      "Compatível com a segurança."
+    ],
+    "answer": 3
+  },
+  {
+    "category": "defensive",
+    "question": "8Alguns fatores diminuem a concentração e retardam os reflexos na condução do veículo. A ação que deve ser evitada, pois pode afetar a concentração do condutor, é:",
+    "options": [
+      "Conversar no celular.",
+      "Fazer uma refeição leve antes de dirigir.",
+      "Buzinar.",
+      "Trafegar por lugares desconhecidos."
+    ],
+    "answer": 0
+  },
+  {
+    "category": "defensive",
+    "question": "9Todo condutor habilitado deve praticar a Direção Defensiva constantemente. O motorista defensivo deve saber que condições adversas são:",
+    "options": [
+      "As particularidades de cada veículo, seus equipamentos e acessórios.",
+      "Os procedimentos de segurança que o motorista defensivo deve adotar para contribuir com o fluxo de veículos em uma via.",
+      "Os fatores ou combinações de fatores que contribuem para aumentar as situações de risco no trânsito, comprometendo a segurança.",
+      "As reciclagens que todo condutor deve fazer periodicamente para aumentar sua habilidade ao dirigir."
+    ],
+    "answer": 2
+  },
+  {
+    "category": "defensive",
+    "question": "10Quando um acidente aconteceu porque o condutor, confiando demais na sua habilidade, circulou com excesso de velocidade e avançou o sinal de trânsito, dizemos que foi ocasionado por:",
+    "options": [
+      "Imprudência.",
+      "Distração.",
+      "Negligência.",
+      "Imperícia."
+    ],
+    "answer": 0
+  },
+  {
+    "category": "defensive",
+    "question": "11Todo condutor, além de conhecer a legislação de trânsito deve preparar-se para conduzir veículos com segurança, conforme preceitos da Direção Defensiva. Sendo assim, indica imperícia do condutor de veículo:",
+    "options": [
+      "Acidente causado pela falta de habilidade do condutor.",
+      "Dirigir sob o efeito de drogas.",
+      "Dirigir com sono.",
+      "Dirigir sob o efeito de álcool."
+    ],
+    "answer": 0
+  },
+  {
+    "category": "defensive",
+    "question": "12De acordo com as regras de direção defensiva:",
+    "options": [
+      "O motorista é responsável apenas pelo seu veículo.",
+      "O veículo é o principal elemento que conduz ao acidente de trânsito.",
+      "O uso do farol alto em sentido contrário é responsável por grande número de acidentes.",
+      "O tempo chuvoso não oferece risco, se o motorista for experiente."
+    ],
+    "answer": 2
+  },
+  {
+    "category": "defensive",
+    "question": "13Distância de parada total é:",
+    "options": [
+      "O mesmo que distância de percepção.",
+      "A distância que o veículo percorre desde o momento que o motorista percebe o perigo até à parada total.",
+      "A distância entre dois veículos em movimento.",
+      "A distância que o veículo percorre desde o momento que o motorista percebe o perigo até colocar o pé no freio."
+    ],
+    "answer": 1
+  },
+  {
+    "category": "defensive",
+    "question": "14São condições adversas do tempo para o aumento dos riscos dos acidentes:",
+    "options": [
+      "Dia, lua, chuva e neblina",
+      "Chuva, neblina, cerração e ofuscamento solar.",
+      "Luminosidade, tempestade, horário matutino e festividade.",
+      "Todas as afirmativas estão corretas"
+    ],
+    "answer": 1
+  },
+  {
+    "category": "defensive",
+    "question": "15As condições adversas podem causar acidentes de trânsito, porém, o perigo torna-se maior, quando elas:",
+    "options": [
+      "São provocadas pelo outro motorista, mas, em veículo de grande porte.",
+      "Aparecem isoladas.",
+      "Aparecem juntas.",
+      "São provocadas por fatores externos."
+    ],
+    "answer": 2
+  },
+  {
+    "category": "defensive",
+    "question": "16A visibilidade do condutor é influenciada pela via, principalmente:",
+    "options": [
+      "Pelo número de faixas de trânsito.",
+      "Pelas mudanças de direção e declividade.",
+      "Pelo tipo de circulação do trânsito.",
+      "Pela presença de passeio."
+    ],
+    "answer": 1
+  },
+  {
+    "category": "defensive",
+    "question": "17A monotonia e a fadiga têm influência primordial e significativa:",
+    "options": [
+      "No nível de atenção do condutor.",
+      "Nas adversidades das vias.",
+      "Na aquisição de técnicas.",
+      "No uso dos equipamentos de segurança."
+    ],
+    "answer": 0
+  },
+  {
+    "category": "defensive",
+    "question": "18O motorista imprudente é aquele que, dentre outras posturas indevidas, faz manobras perigosas, como:",
+    "options": [
+      "Ultrapassagem forçada e desobediência à sinalização.",
+      "Dirigir veículo sem experiência.",
+      "Não portar os equipamentos obrigatórios em total funcionamento.",
+      "Não portar os documentos de habilitação do veículo e o bilhete de seguro obrigatório."
+    ],
+    "answer": 0
+  },
+  {
+    "category": "defensive",
+    "question": "19São consideradas condições adversas de tempo:",
+    "options": [
+      "Trânsito lento e aclive.",
+      "Trechos escorregadios e declives.",
+      "Atrasos de horário e descortesia.",
+      "Vento e chuva."
+    ],
+    "answer": 3
+  },
+  {
+    "category": "defensive",
+    "question": "20Um condutor atrasado, com horário a cumprir, se não for um motorista defensivo, tende a:",
+    "options": [
+      "Aumentar a velocidade do veículo.",
+      "Forçar passagem entre veículos.",
+      "Desrespeitar a sinalização.",
+      "Todas as alternativas estão corretas."
+    ],
+    "answer": 3
+  },
+  {
+    "category": "defensive",
+    "question": "21O egoísmo, a falta de controle emocional e a agressividade são fatores que geram:",
+    "options": [
+      "Conflitos que ameaçam a segurança do trânsito.",
+      "Respeito aos direitos e aos deveres do cidadão e do grupo.",
+      "Convivência harmônica no trânsito.",
+      "Um relacionamento mais humano e contínuo entre os grupos."
+    ],
+    "answer": 0
+  },
+  {
+    "category": "defensive",
+    "question": "22O conceito de direção defensiva inclui cuidados com o veículo. O próprio condutor, por inspeção visual simples, pode verificar vários itens de segurança. Outras verificações devem ser feitas somente por um profissional. Como é o caso:",
+    "options": [
+      "Do nível de água do radiador.",
+      "Da regulagem dos faróis.",
+      "Do nível de óleo do motor.",
+      "Do funcionamento do desembaçador."
+    ],
+    "answer": 1
+  },
+  {
+    "category": "defensive",
+    "question": "23A posição correta que o condutor deve adotar para conduzir veículos é:",
+    "options": [
+      "A mão direita sobre a alavanca de câmbio, para facilitar trocas de marchas em situações de emergência.",
+      "O pé direito levemente apoiado no freio, para frear rapidamente em situações de emergência.",
+      "As duas mãos no volante, imitando os ponteiros de um relógio na posição de 9 horas e 15 minutos.",
+      "O pé esquerdo levemente apoiado na embreagem para facilitar trocas de marchas em situações de emergência."
+    ],
+    "answer": 2
+  },
+  {
+    "category": "defensive",
+    "question": "24Ter domínio sobre a correta utilização das luzes do veículo faz parte da direção defensiva. Assim, o condutor deve saber que o uso do farol alto, à noite, em uma rodovia:",
+    "options": [
+      "É permitido, mesmo ao se cruzar com outro veículo em sentido contrário.",
+      "É proibido em qualquer caso.",
+      "Deve ser substituído pela luz baixa ao se aproximar de outro veículo em sentido contrário.",
+      "É permitido em rodovias de pista dupla."
+    ],
+    "answer": 2
+  },
+  {
+    "category": "defensive",
+    "question": "25Para dirigir com maior segurança, a forma correta de segurar o volante de direção é com as mãos:",
+    "options": [
+      "Apoiadas na parte externa do volante, em posição similar a 'nove horas e quinze minutos' do relógio.",
+      "Juntas, em cima.",
+      "Juntas, na parte de baixo.",
+      "Apoiadas na parte externa do volante, em posição similar a 'seis horas e vinte minutos' do relógio."
+    ],
+    "answer": 0
+  },
+  {
+    "category": "defensive",
+    "question": "26Entre outros efeitos, o álcool provoca no motorista:",
+    "options": [
+      "Menor capacidade de tomar decisões erradas.",
+      "Aumento da capacidade para perceber o perigo.",
+      "Diminuição da capacidade de tomar decisões rápidas e acertadas para evitar acidentes.",
+      "Maior capacidade para ver o perigo."
+    ],
+    "answer": 2
+  },
+  {
+    "category": "defensive",
+    "question": "27Em direção defensiva, HABILIDADE significa:",
+    "options": [
+      "Dirigir em estado de alerta permanente.",
+      "Manejar o veículo com perícia.",
+      "Prever situações e locais de perigo.",
+      "Ver e ser visto."
+    ],
+    "answer": 1
+  },
+  {
+    "category": "defensive",
+    "question": "28O motorista, entrando em um trecho com neblina muito intensa que lhe impeça boa visibilidade, deverá:",
+    "options": [
+      "Procurar um local fora da pista, parar o veículo, sinalizar e aguardar em segurança.",
+      "Manter a mesma velocidade, para outro veículo não bater na traseira.",
+      "Prosseguir a viagem com velocidade reduzida, acionando os faróis altos.",
+      "Continuar a viagem com a mesma velocidade, acionando as luzes de emergência."
+    ],
+    "answer": 0
+  },
+  {
+    "category": "defensive",
+    "question": "29Para reduzir os 'pontos cegos' do veículo deve-se:",
+    "options": [
+      "Manter os vidros sempre limpos.",
+      "Instalar um sistema de faróis mais potente.",
+      "Retirar os apoios de cabeça do banco traseiro.",
+      "Ajustar corretamente os espelhos externos e internos."
+    ],
+    "answer": 3
+  },
+  {
+    "category": "defensive",
+    "question": "30Todo condutor deve redobrar a atenção em caso de chuvas intensas. Assim, ter os limpadores de pára-brisa sempre em bom estado e o sistema de sinalização do veículo funcionando perfeitamente:",
+    "options": [
+      "Reduzem a visibilidade panorâmica do condutor, aumentando as condições de segurança.",
+      "Impedem a visibilidade panorâmica do condutor.",
+      "Aumentam as condições de segurança, reduzindo riscos de colisão.",
+      "Impedem plenamente o efeito de ofuscamento de outros condutores."
+    ],
+    "answer": 2
+  }
+]

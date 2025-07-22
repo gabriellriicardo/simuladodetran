@@ -1,0 +1,321 @@
+[
+  {
+    "category": "first-aid",
+    "question": "Um motorista socorre uma pessoa com hemorragia no ombro. Para tentar estancar a hemorragia, ele NÃO deve:",
+    "options": [
+      "Fazer um curativo improvisado.",
+      "Colocar uma toalha limpa e dobrada, fazendo compressão no ferimento.",
+      "Realizar o atendimento utilizando luvas de proteção.",
+      "Providenciar um local seguro para atendimento à vítima."
+    ],
+    "answer": 0
+  },
+  {
+    "category": "first-aid",
+    "question": "Todas as alternativas abaixo são providências a serem tomadas na necessidade de atendimento de first-aid, EXCETO:",
+    "options": [
+      "A sinalização de acidentes durante a noite deve ser dobrada e com utilização de dispositivos luminosos",
+      "Retirar o capacete de um motociclista é a primeira ação que devemos tomar ao nos depararmos com um acidente com motos",
+      "Quando o ponteiro do extintor de incêndio estiver vermelho, ele deve ser recarregado",
+      "Respirar profundamente e observar o próprio corpo em busca de ferimentos ajuda a recobrar a calma"
+    ],
+    "answer": 1
+  },
+  {
+    "category": "first-aid",
+    "question": "Um cabo de eletricidade se rompeu e está sobre o veículo que bateu em um poste. Assinale o procedimento adequado com relação às pessoas que se encontram dentro do veículo.",
+    "options": [
+      "Permanecer no interior do veículo.",
+      "Sair imediatamente do veículo.",
+      "Sair do veículo e retirar o cabo.",
+      "Solicitar que algum pedestre retire o cabo de cima do veículo."
+    ],
+    "answer": 0
+  },
+  {
+    "category": "first-aid",
+    "question": "Compressão torácica externa é conhecida como:",
+    "options": [
+      "Massagem cardíaca;",
+      "Lesão no tórax;",
+      "Contenção de hemorragia no toráx;",
+      "Problema cardíaco."
+    ],
+    "answer": 0
+  },
+  {
+    "category": "first-aid",
+    "question": "Quanto ao uso de extintor de incêndio. É FALSO afirmar:",
+    "options": [
+      "O extintor deve ser usado fazendo-se movimentos em forma de leque.",
+      "Um extintor está carregado quando o ponteiro de medidor de pressão está na área vermelha.",
+      "Empregar, se possível, vários extintores ao mesmo tempo.",
+      "O jato do extintor deve ser dirigido para a base das chamas."
+    ],
+    "answer": 1
+  },
+  {
+    "category": "first-aid",
+    "question": "Em caso de acidentes, é obrigação de todos:",
+    "options": [
+      "Socorrer a vítima imediatamente.",
+      "Prestar auxílio, mesmo com risco pessoal.",
+      "Socorrer apenas para quem causou o acidente.",
+      "Prestar auxílio, desde que não corra risco pessoal."
+    ],
+    "answer": 3
+  },
+  {
+    "category": "first-aid",
+    "question": "Dentre as alternativas abaixo, assinale aquela que NÃO corresponde à definição de first-aid:",
+    "options": [
+      "Socorro de emergência que pode ser prestado apenas por profissionais de saúde.",
+      "Socorro de emergência que pode ser prestado por qualquer pessoa desde que tenha calma e se ache em condições de ajudar no sentido de se evitar o agravamento das lesões.",
+      "Primeiras providências tomadas no local do acidente.",
+      "Atendimento inicial e temporário até a chegada de um socorro profissional."
+    ],
+    "answer": 0
+  },
+  {
+    "category": "first-aid",
+    "question": "Qual o principal método para se conter uma hemorragia?",
+    "options": [
+      "Torniquete (Técnica usada para conter hemorragias em membros, impedindo a circulação do sangue na região).",
+      "Elevação do membro.",
+      "Compressão direta da lesão.",
+      "Compressão direta da lesão e torniquete."
+    ],
+    "answer": 2
+  },
+  {
+    "category": "first-aid",
+    "question": "Qual das alternativas abaixo está ERRADA:",
+    "options": [
+      "Algumas rodovias têm números de telefones de emergências nos acostamentos",
+      "A Polícia Militar pode ser acionada quando ocorrer uma emergência em locais que não tenham serviços próprios de socorro",
+      "O resgate do Corpo de Bombeiros deve ser acionado quando houver vítimas presas nas ferragens",
+      "O número 139, resgate do Corpo de Bombeiros, é um serviço utilizado para emergência em via pública."
+    ],
+    "answer": 3
+  },
+  {
+    "category": "first-aid",
+    "question": "Com relação ao uso de torniquetes (Técnica usada para conter hemorragias em membros, impedindo a circulação do sangue na região), assinale o item falso.",
+    "options": [
+      "Atualmente só é feito por profissionais treinados e, mesmo assim, em caráter de exceção",
+      "É sempre aconselhado para estancar hemorragias externas",
+      "Não deve ser realizado para estancar hemorragias externas",
+      "Quase nunca é aconselhado"
+    ],
+    "answer": 1
+  },
+  {
+    "category": "first-aid",
+    "question": "Quanto ao uso do extintor em caso de acidentes de trânsito com incêndio, assinale a alternativa CORRETA:",
+    "options": [
+      "O extintor deve ser usado na posição horizontal.",
+      "Dirija o jato para o meio do fogo",
+      "Faça movimento em forma de leque de forma a cobrir toda a área em chamas.",
+      "Para um melhor resultado o produto deve ser empregado em pequenas quantidades."
+    ],
+    "answer": 2
+  },
+  {
+    "category": "first-aid",
+    "question": "Você presenciou um acidente numa rodovia administrada por uma concessionária. Assinale a alternativa que representa o serviço que deve ser inicialmente acionado para socorro.",
+    "options": [
+      "Serviço de Atendimento ao Usuário",
+      "SAMU",
+      "Resgate do Corpo de Bombeiros",
+      "Polícia Rodoviária Federal ou Estadual"
+    ],
+    "answer": 0
+  },
+  {
+    "category": "first-aid",
+    "question": "Assinale a alternativa INCORRETA:",
+    "options": [
+      "A luva para proteção contra doenças infecto-contagiosas deve ser de borracha, podendo ser profissionais ou de uso doméstico.",
+      "Jogue terra ou areia sobre óleo derramado na pista a fim de evitar acidentes.",
+      "Se a vítima estiver de bruços e respirando, sustente a cabeça na mesma posição e aguarde o socorro chegar;",
+      "Para o socorro com risco de contágio através de sangue e secreções, é dispensável o uso de luvas de borracha."
+    ],
+    "answer": 3
+  },
+  {
+    "category": "first-aid",
+    "question": "Assinale a alternativa que não apresenta uma das finalidades do atendimento de first-aid:",
+    "options": [
+      "Evitar o agravamento do estado da vítima.",
+      "Diagnosticar com precisão os problemas do acidentado.",
+      "Reduzir alguns riscos.",
+      "Prestar auxílio inicial em um acidente de trânsito."
+    ],
+    "answer": 1
+  },
+  {
+    "category": "first-aid",
+    "question": "Em caso de acidente, a primeira atitude a ser tomada, é:",
+    "options": [
+      "Remover as vítimas.",
+      "Efetuar a respiração artificial.",
+      "Procurar um telefone e chamar o serviço médico especializado.",
+      "Proteger a cabeça e a coluna das vítimas."
+    ],
+    "answer": 2
+  },
+  {
+    "category": "first-aid",
+    "question": "Há uma vítima de acidente de trânsito dentro de um veículo com fumaça. Se não houver risco pessoal, o socorrista deve:",
+    "options": [
+      "Se possível, retirar a vítima de dentro do veículo.",
+      "Tentar abrir as portas do veículo para arejar.",
+      "Afastar-se rapidamente.",
+      "Jogar água no veículo e até na vítima para resfriar o local."
+    ],
+    "answer": 0
+  },
+  {
+    "category": "first-aid",
+    "question": "Se uma vítima de acidente pedir água para beber, deve-se:",
+    "options": [
+      "Recusar seu pedido.",
+      "Mantê-la com leite e líquidos adocicados.",
+      "dar um copo, no máximo.",
+      "Deixar tomar o que quiser."
+    ],
+    "answer": 0
+  },
+  {
+    "category": "first-aid",
+    "question": "É muito importante manter a vítima protegida. É falso afirmar:",
+    "options": [
+      "Para protegê-la do sol use qualquer peça de roupa limpa;",
+      "Procure um local sem riscos para a vítima caso ela já tenha saído sozinha de seu veículo;",
+      "Em dias de chuva não deixe a vítima exposta, pois isto pode agravar sua situação.",
+      "Manter a vítima aquecida significa diminuir a temperatura de seu corpo;"
+    ],
+    "answer": 3
+  },
+  {
+    "category": "first-aid",
+    "question": "Qual o método mais indicado para conter uma hemorragia externa?",
+    "options": [
+      "Usar um torniquete (Técnica usada para conter hemorragias em membros, impedindo a circulação do sangue na região).",
+      "Aplicar pressão acima do ponto da hemorragia.",
+      "Aplicar pressão direta sobre o ferimento, com uma compressa seca e limpa.",
+      "Deixar sangrar por 05 minutos e depois elevar o membro ferido, parando o sangramento."
+    ],
+    "answer": 2
+  },
+  {
+    "category": "first-aid",
+    "question": "Após ter causado um atropelamento, um motorista que conduzia o veículo chamou o socorro especializado para socorrer a vítima e enquanto aguardava o resgate, adotou procedimentos. Assinale a alternativa correta:",
+    "options": [
+      "Manteve a calma e removeu a vítima.",
+      "Esperou as autoridades para dar início à sinalização local e promover a interrupção da fluidez do tráfego.",
+      "Isolou o local do acidente e evitou a presença de curiosos.",
+      "Interrompeu a fluidez do tráfego e obrigou os pedestres a ajudar."
+    ],
+    "answer": 2
+  },
+  {
+    "category": "first-aid",
+    "question": "Uma vítima de acidente de trânsito está com ferimentos nos braços e pernas e emocionalmente abalada, negando-se a receber auxílio. Nesse caso, após a solicitação de resgate, o socorrista deve:",
+    "options": [
+      "Revelar os culpados e as consequências do acidente para que a vítima se tranquilize.",
+      "Oferecer um tranquilizante para deixá-la mais calma.",
+      "Informar as providências tomadas pelos socorristas.",
+      "Sugerir que se movimente enquanto aguarda o socorro."
+    ],
+    "answer": 2
+  },
+  {
+    "category": "first-aid",
+    "question": "Assinale a alternativa incorreta.",
+    "options": [
+      "Se o cinto de segurança estiver dificultando a respiração da vítima, você deverá soltá-lo sem movimentar seu corpo.",
+      "Mantenha a vítima ciente dos acontecimentos mesmo que sua atitude gere discussões;",
+      "Seja sempre solidário e permaneça junto à vítima num local onde ela possa ver você;",
+      "Se for necessário abrir a porta do veículo, abra-a com cuidado para não movimentar a vítima;"
+    ],
+    "answer": 1
+  },
+  {
+    "category": "first-aid",
+    "question": "Um ciclista é atropelado por um carro e desmaia após bater a cabeça no chão. Em relação à vítima, a pessoa que foi socorrê-la deve:",
+    "options": [
+      "Retirar o capacete.",
+      "Evitar movimentá-la.",
+      "Removê-la rapidamente para um local mais confortável.",
+      "Colocar uma pequena almofada embaixo da cabeça."
+    ],
+    "answer": 1
+  },
+  {
+    "category": "first-aid",
+    "question": "Em um acostamento de rodovia, ao fazer reparos na parte elétrica de seu veículo, um motorista lesou sua mão com uma ferramenta, ocasionando sangramento abundante. Como medida de first-aid, para estancar o sangue, ele deverá:",
+    "options": [
+      "Fazer um torniquete (Técnica usada para conter hemorragias em membros, impedindo a circulação do sangue na região) no pulso.",
+      "Comprimir o ferimento com gaze ou pano limpo.",
+      "Aplicar compressas quentes.",
+      "Passar anti-séptico e proteger o local com um pano umedecido em água."
+    ],
+    "answer": 1
+  },
+  {
+    "category": "first-aid",
+    "question": "Marque a alternativa que está relacionada com uma finalidade dos first-aid:",
+    "options": [
+      "Acionar corretamente um serviço de emergência local.",
+      "Saber utilizar técnicas simples e complexas.",
+      "Diagnosticar com rapidez e segurança as complicações na saúde da vítima.",
+      "Medicar as vítimas diminuindo as dores."
+    ],
+    "answer": 0
+  },
+  {
+    "category": "first-aid",
+    "question": "Qual destes cuidados abaixo NÃO DEVE ser realizado em um acidente de trânsito com vítimas, onde não haja perigo iminente de vida para a vítima e socorrista.",
+    "options": [
+      "Controle e sinalização do trânsito até a chegada da polícia.",
+      "Controlar o estresse evitando mais angústia à vítima.",
+      "Remoção imediata das vítimas das ferragens.",
+      "Uso de barreiras de proteção como luvas ou saco plástico na mãos."
+    ],
+    "answer": 2
+  },
+  {
+    "category": "first-aid",
+    "question": "Na maioria das regiões do Brasil, o número 192 corresponde ao telefone:",
+    "options": [
+      "Do Resgate do Corpo de Bombeiros.",
+      "Da Polícia Rodoviária Estadual.",
+      "Do SAMU.",
+      "Polícia Militar.."
+    ],
+    "answer": 2
+  },
+  {
+    "category": "first-aid",
+    "question": "Assinale a alternativa incorreta:",
+    "options": [
+      "Se a vítima estiver agressiva, pondo você em risco, afaste-se;",
+      "Se o cinto de segurança estiver dificultando a respiração da vítima, você deverá soltá-lo sem movimentar seu corро.",
+      "Se a vítima estiver de bruços e respirando, sustente a cabeça na mesma posição e aguarde o socorro chegar;",
+      "Mesmo que a vítima sinta dificuldades para respirar, não solte o cinto de segurança, isso pode prejudicá-la."
+    ],
+    "answer": 3
+  },
+  {
+    "category": "first-aid",
+    "question": "Uma pessoa está queixando-se de muita dor no calcanhar esquerdo após torcer o pé na rua. Nessa situação, considera-se conduta de first-aid:",
+    "options": [
+      "Orientá-la a não movimentar o pé esquerdo e providenciar atendimento médico.",
+      "Recolocar a articulação no lugar.",
+      "Fazer movimentos de baixo para cima com o pé.",
+      "Massagear o calcanhar e colocar uma bolsa de água quente no local."
+    ],
+    "answer": 0
+  }
+]

@@ -1,0 +1,332 @@
+[
+  {
+    "category": "environment",
+    "question": "Um caminhão tanque derrapou e despejou 25.000 litros de óleo diesel no acostamento e na represa que fica à beira da estrada. Considerando o relato acima, é correto afirmar:",
+    "options": [
+      "O motorista do caminhão e a empresa transportadora estão isentos de culpa, devido à má conservação das estradas brasileiras.",
+      "Não foram registrados danos à vegetação do acostamento porque o óleo é facilmente absorvido pelo solo.",
+      "O lençol subterrâneo de água foi contaminado pelo óleo, pois este escorreu rapidamente para as camadas mais profundas do subsolo.",
+      "Como têm a mesma densidade, o óleo e a água se misturaram rapidamente, não afetando o equilíbrio ecológico da represa."
+    ],
+    "answer": 2
+  },
+  {
+    "category": "environment",
+    "question": "A poluição provocada pelos detritos jogados por condutores e por ocupantes do veículo nas rodovias, é resultante de:",
+    "options": [
+      "Problemas causados pela relação trânsito e meio ambiente.",
+      "Agressões ambientais e favorecem a integração trânsito e meio ambiente.",
+      "Medidas práticas, que feitas de maneira criteriosa, evitam a erosão natural do solo.",
+      "\"Humanização no trânsito\"."
+    ],
+    "answer": 0
+  },
+  {
+    "category": "environment",
+    "question": "Uma resolução CONAMA de 2003 estabelece novos limites máximos para a emissão de poluentes provenientes dos escapamentos dos veículos. Dentre estes gases, um dos mais visados é o:",
+    "options": [
+      "Monóxido de Carbono.",
+      "Hidrogênio.",
+      "Argônio.",
+      "Neônio."
+    ],
+    "answer": 0
+  },
+  {
+    "category": "environment",
+    "question": "Deixar lixo num saco plástico no acostamento de uma rodovia:",
+    "options": [
+      "Preserva o meio ambiente.",
+      "Agride o meio ambiente e ajuda a aumentar a poluição ambiental das rodovias.",
+      "Contribui para a reciclagem de matéria-prima.",
+      "Não causa danos ao meio ambiente por que o lixo foi colocado em saco plástico."
+    ],
+    "answer": 1
+  },
+  {
+    "category": "environment",
+    "question": "Inúmeras recomendações podem ser feitas para que os condutores de veículos automotores possam contribuir para diminuir os índices de poluição. Dentre elas, cita-se:",
+    "options": [
+      "Esquentar o carro na garagem, sobretudo, com o uso do afogador.",
+      "'Esticar' a marcha para manter a velocidade constante.",
+      "Evitar reduções constantes de marcha e freadas em excesso.",
+      "Manter o motor acelerado, mesmo nos momentos de congestionamento."
+    ],
+    "answer": 2
+  },
+  {
+    "category": "environment",
+    "question": "Veículos automotores, ao final de sua vida útil, criam sérios problemas ao meio ambiente. Uma solução viável que ajuda a minimizar estes problemas é:",
+    "options": [
+      "Destinar componentes como pneus, óleos lubrificantes, peças metálicas e plástica para reciclagem.",
+      "Depositar os veiculos em terrenos baldios, facilitando sua decomposição natural.",
+      "Obrigar a indústria automobilistica a utilizar somente matéria-prima reciclada na produção de novos veículos.",
+      "Incentivar a abertura de oficinas de desmanches para retirar as peças mais caras e revendê-las no mercado paralelo."
+    ],
+    "answer": 0
+  },
+  {
+    "category": "environment",
+    "question": "Uma das causas do aquecimento global é a emissão de gases responsáveis pelo efeito estufa. O Brasil tem feito esforços para reduzir essa emissão. Dentre as medidas tomada pelo governo, cita-se a:",
+    "options": [
+      "Difusão de pesquisas sobre novos combustíveis, como o carvão, para substituir o petróleo.",
+      "Criação de normas que estabelecem o nível máximo de gases emitidos pelos veículos.",
+      "Estímulo à compra de veiculos de grande porte por que consomem menos combustível.",
+      "Elaboração de um novo código de trânsito adequado às novas exigências mundiais."
+    ],
+    "answer": 1
+  },
+  {
+    "category": "environment",
+    "question": "Para poluir menos o ambiente, ao dirigir, deve-se:",
+    "options": [
+      "Evitar reduções constantes de marcha e de freadas bruscas.",
+      "Usar o afogador independentemente do momento da partida do veículo.",
+      "Alterar a velocidade do veículo freqüentemente.",
+      "Fazer paradas prolongadas com o motor funcionando."
+    ],
+    "answer": 0
+  },
+  {
+    "category": "environment",
+    "question": "Promover um trânsito mais humano, tornando o ambiente urbano mais agradável é função:",
+    "options": [
+      "Do paisagismo e da arquitetura.",
+      "Do reflorestamento e da engenharia.",
+      "Da arborização urbana e da boa relação homem e ambiente.",
+      "Das florestas nativas e do reflorestamento."
+    ],
+    "answer": 2
+  },
+  {
+    "category": "environment",
+    "question": "O motorista percebe que os pneus dianteiros de seu veículo estão carecas e resolve trocá-los. O destino AMBIENTALMENTE CORRETO para os pneus velhos é:",
+    "options": [
+      "Descartá-los em lixões conforme normas do CONAMA.",
+      "Levá-los a um local onde possam ser reciclados.",
+      "Descartá-los em uma caçamba de detritos de construção.",
+      "Descartá-los na zona rural para queima, de acordo com o CTB."
+    ],
+    "answer": 1
+  },
+  {
+    "category": "environment",
+    "question": "A preservação do meio ambiente depende:",
+    "options": [
+      "Somente de atitudes individuais.",
+      "Das pessoas que têm tempo e recursos financeiros para fazê-la.",
+      "Somente da criação de uma taxa de contribuição específica para esse fim.",
+      "De atitudes individuais e coletivas de toda a sociedade."
+    ],
+    "answer": 3
+  },
+  {
+    "category": "environment",
+    "question": "Realizar a manutenção preventiva do veículo contribui com a preservação do meio ambiente. Assim, o condutor deve saber que, quanto melhor a queima do combustível, menos o motor do automóvel polui. Um dos gases poluidores é o dióxido de enxofre, que:",
+    "options": [
+      "Está presente somente na combustão da gasolina.",
+      "Provoca distúrbios auditivos.",
+      "Está presente na combustão do óleo diesel.",
+      "Não está presente na combustão do óleo diesel."
+    ],
+    "answer": 2
+  },
+  {
+    "category": "environment",
+    "question": "Atitude do indivíduo enquanto cidadão contribuinte para o equilibrio ecológico é:",
+    "options": [
+      "Queimar o solo para construção de rodovias.",
+      "Cortar matas naturais para construir estradas.",
+      "Respeitar e preservar todas as formas de vidas na Terra.",
+      "Capturar animais silvestres."
+    ],
+    "answer": 2
+  },
+  {
+    "category": "environment",
+    "question": "Assinale a alternativa correta:",
+    "options": [
+      "os veículos movidos a álcool não poluem o ambiente.",
+      "todos os veículos automotores são poluentes.",
+      "somente os veículos movidos a diesel provocam poluição no ambiente.",
+      "somente os veículos movidos à gasolina provocam poluição no ambiente."
+    ],
+    "answer": 1
+  },
+  {
+    "category": "environment",
+    "question": "Qual das situações descritas abaixo respeita os valores democráticos e de cidadania.",
+    "options": [
+      "Alunos de escola pública de pequena comunidade litorânea implantaram coleta seletiva de lixo na praia, nas férias so último verão.",
+      "Trio elétrico perturba moradores de Boa Viagem durante carnaval fora de época.",
+      "Moradores de condomínio de luxo transitam meia quadra na contramão para chegar mais rápido ao portão da garagem.",
+      "Um grupo de jovens pichou, nesta madrugada, muros do mais antigo museu da cidade."
+    ],
+    "answer": 0
+  },
+  {
+    "category": "environment",
+    "question": "Em relação ao meio ambiente, é CORRETO afirmar:",
+    "options": [
+      "As intervenções feitas pelo homem na paisagem natural para construção de rodovias têm trazido efeitos positivos para a natureza.",
+      "No grande ecosssistema que é o nosso planeta, o meio ambiente pouco afetado pelo trânsito das metrópoles.",
+      "Os comportamentos inadequados do ser humano em situações de trânsito podem causar muitos problemas ao meio ambiente.",
+      "A natureza tem infinita capacidade de compensar todo e qualquer desequilíbrio ecológico provocado pelo trânsito."
+    ],
+    "answer": 2
+  },
+  {
+    "category": "environment",
+    "question": "Dentre o conjunto de elementos lançados no ar atmosférico pelos veículos, encontra-se o ALDEÍDO. Esse composto é lançado por:",
+    "options": [
+      "Motocicletas de modelos produzidos antes de 1997.",
+      "Veículos movidos a álcool e provocam irritação ao aparelho respiratório.",
+      "Veículos pesados, movidos à gasolina, e estão entre os responsáveis pela diminuição da camada de ozônio.",
+      "Veículos importados que não passaram pelo controle do CONAMA."
+    ],
+    "answer": 1
+  },
+  {
+    "category": "environment",
+    "question": "Há muitas formas de se exercer a cidadania no trânsito. Uma delas é:",
+    "options": [
+      "Permitir que pessoas viagem no banco de trás do veículo sem o uso de cinto de segurança.",
+      "Manter saquinhos plásticos nos veículos para colocar o lixo e depois colocá-los em local apropriado.",
+      "Estacionar ao lado de outro veículo em fila dupla na porta de escolas, para deixar ou buscar crianças.",
+      "Jogar para fora do veículo todo o lixo, para o carro não ficar poluído."
+    ],
+    "answer": 1
+  },
+  {
+    "category": "environment",
+    "question": "A poluição visual contribui para:",
+    "options": [
+      "Intoxicar o ambiente.",
+      "Deixar as ruas mais ornamentadas.",
+      "Fazer o uso intense de propagandas.",
+      "Desviar a atenção de pedestres e motoristas."
+    ],
+    "answer": 3
+  },
+  {
+    "category": "environment",
+    "question": "O órgão do governo federal responsável por determinar os limites de emissão de gases, fumaça e ruídos de veículos automotores é o:",
+    "options": [
+      "Conselho Nacional do Meio Ambiente - CONAMA.",
+      "Ministério dos Transportes.",
+      "Conselho Nacional de Transito - CONTRAN.",
+      "Prefeituras Municipais."
+    ],
+    "answer": 0
+  },
+  {
+    "category": "environment",
+    "question": "Assinale a altenativa CORRETA:",
+    "options": [
+      "Caso haja vazamento de produtos perigosos devemos interditar totalmente a pista e evacuar a área..",
+      "Óleo da pista deve ser removido com bastante água.",
+      "Não se deve tomar atitude nenhuma, o motorista do caminhão é que tem que resolver.",
+      "Fragmentos de veículo acidentados não devem ser removidos da pista em nenhuma hipótese."
+    ],
+    "answer": 0
+  },
+  {
+    "category": "environment",
+    "question": "Um cuidado importante que o proprietário ou condutor de veículo deve ter para evitar danos ao meio ambiente e à saúde é:",
+    "options": [
+      "Ignorar as práticas recomendadas pelo fabricante do veículo, para economizar combustível.",
+      "Lavar o tanque de combustível com água uma vez por mês.",
+      "Fazer as trocas de óleo em postos especializados, que destinam à reciclagem os lubrificantes utilizados.",
+      "Colocar combustível adulterado porque é mais barato e assim se pode economizar dinheiro."
+    ],
+    "answer": 2
+  },
+  {
+    "category": "environment",
+    "question": "A poluição ambiental nas cidades é hoje uma das mais graves ameaças à nossa qualidade de vida. Todo condutor deve saber que os veículos automotores:",
+    "options": [
+      "Não provocam poluição atmosférica quando o combustível utilizado é de boa qualidade.",
+      "Não provocam poluição nenhuma na atmosfera.",
+      "A poluição provocada pelos veículos não é nociva para os seres humanos.",
+      "São um dos principais causadores da poluição do ar."
+    ],
+    "answer": 3
+  },
+  {
+    "category": "environment",
+    "question": "É dever de todo condutor colaborar para a preservação do meio ambiente. É atitude que contribui para o aumento da poluição ambiental:",
+    "options": [
+      "Despejar o óleo usado de motor nas vias públicas.",
+      "Manter sempre sacos de lixo dentro do veículo.",
+      "Não jogar entulho nas margens das rodovias.",
+      "Despejar o lixo dos veículos em pontos de reciclagem de materiais."
+    ],
+    "answer": 0
+  },
+  {
+    "category": "environment",
+    "question": "Em um caminhão com pneus carecas, pisca sem funcionar e as lanternas traseiras quebradas, transita pela via espalhando a areia carregada na carroceria descoberta. Diante dessa situação, em relação ao trânsito, é CORRETO afirmar que:",
+    "options": [
+      "Conduzir substâncias nocivas e poluidoras nos veículos é uma ação agressiva sobre o meio ambiente, mas não atinge a segurança das pessoas.",
+      "As más condições do veículo podem provocar graves problemas ao meio ambiente e às pessoas.",
+      "Um único veículo não consegue produzir danos ao meio ambiente e às pessoas.",
+      "Apenas se forem vários veículos poderá provocar danos ao meio ambiente."
+    ],
+    "answer": 1
+  },
+  {
+    "category": "environment",
+    "question": "Para solucionar o problema de aumento de poluição atmosférica nas cidades devido ao grande número de veículos em circulação, é necessário:",
+    "options": [
+      "Abastecer os veículos com combustível aditivado.",
+      "Equipar os veículos com catalisadores eficientes, segundo as especificações dos fabricantes.",
+      "Manter os veículos limpos e com a pintura conservada.",
+      "Retirar o catalisador para melhora a qualidade do ar queimado pelo motor."
+    ],
+    "answer": 1
+  },
+  {
+    "category": "environment",
+    "question": "Atualmente, graças à intensa propaganda, para muitas pessoas, a aquisição de um veículo transformou-se em promessa de sucesso e felicidade. Um dos custos sociais desse consumismo desenfreado é:",
+    "options": [
+      "O impacto provocado no meio ambiente através da poluição.",
+      "A criação de uma sociedade cada vez menos desigual.",
+      "A ampliação das sanções aos motoristas infratores.",
+      "Melhoria na qualidade do fluxo de trânsito."
+    ],
+    "answer": 0
+  },
+  {
+    "category": "environment",
+    "question": "Em relação ao meio ambiente, a legislação de trânsito:",
+    "options": [
+      "Dificulta a manter as vias de trânsito em perfeitas condições de USO.",
+      "Prevê infrações e penalidades.",
+      "Fornece orientações técnicas ambientais.",
+      "Não interfere em quase nada."
+    ],
+    "answer": 1
+  },
+  {
+    "category": "environment",
+    "question": "Evitar a agressão ao ambiente provocado por motores e escapamentos desregulados é:",
+    "options": [
+      "Dever de todo condutor de veículo.",
+      "Facultado a todo condutor de veículo.",
+      "O condutor regula se quiser.",
+      "Dever apenas dos condutores de veículos de grande porte como caminhões e carretas."
+    ],
+    "answer": 0
+  },
+  {
+    "category": "environment",
+    "question": "É fator de integração entre trânsito e meio ambiente:",
+    "options": [
+      "As normas do CONAMA (Conselho Nacional do Meio Ambiente).",
+      "A observação e o registro dos elementos que compõem o meio ambiente.",
+      "O respeito e preservação da vida e do meio ambiente.",
+      "Todas as alternativas estão corretas."
+    ],
+    "answer": 3
+  }
+]

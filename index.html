@@ -15,8 +15,8 @@
             backdrop-filter: blur(10px);
             -webkit-backdrop-filter: blur(10px);
         }
-        .question-card {
-            transition: opacity 0.4s ease-in-out;
+        #question-content {
+            transition: opacity 0.2s ease-in-out;
         }
         .option-label {
             transition: all 0.25s ease;
@@ -168,11 +168,13 @@
                 </div>
             </div>
 
-            <div class="bg-white/70 backdrop-blur-sm border border-slate-200 p-6 sm:p-8 rounded-2xl shadow-xl relative min-h-[400px]">
-                <div id="questions-container">
-                    <!-- Questions will be injected and managed here -->
+            <div class="bg-white/70 backdrop-blur-sm border border-slate-200 rounded-2xl shadow-xl p-6 sm:p-8 flex flex-col justify-between min-h-[480px]">
+                <div id="question-content">
+                    <p id="question-title" class="text-xl font-bold text-slate-900 mb-6"></p>
+                    <div id="question-image-container" class="mb-6 flex justify-center"></div>
+                    <div id="question-options" class="space-y-3"></div>
                 </div>
-                <div class="absolute bottom-6 right-6 flex gap-4">
+                <div class="flex justify-end gap-4 mt-6 pt-6 border-t border-slate-200">
                      <button id="prev-btn" class="py-2 px-5 bg-slate-200 text-slate-700 font-semibold rounded-lg hover:bg-slate-300 transition-colors disabled:opacity-50 disabled:cursor-not-allowed shadow-sm">&larr; Anterior</button>
                      <button id="next-btn" class="py-2 px-5 bg-slate-200 text-slate-700 font-semibold rounded-lg hover:bg-slate-300 transition-colors disabled:opacity-50 disabled:cursor-not-allowed shadow-sm">Próxima &rarr;</button>
                 </div>
@@ -232,7 +234,7 @@
             </div>
         </div>
     </div>
-
+    
     <script>
         // --- DOM Elements ---
         const startScreen = document.getElementById('start-screen');
@@ -243,7 +245,10 @@
         const submitBtn = document.getElementById('submit-btn');
         const restartBtn = document.getElementById('restart-btn');
         const reviewBtn = document.getElementById('review-btn');
-        const questionsContainer = document.getElementById('questions-container');
+        const questionContent = document.getElementById('question-content');
+        const questionTitleEl = document.getElementById('question-title');
+        const questionImageContainer = document.getElementById('question-image-container');
+        const questionOptionsEl = document.getElementById('question-options');
         const timerEl = document.getElementById('timer');
         const questionNavGrid = document.getElementById('question-nav-grid');
         const prevBtn = document.getElementById('prev-btn');
@@ -269,7 +274,7 @@
                 totalQuestions: 30,
                 time: 40 * 60,
                 passingScore: 21,
-                categories: ['defensive', 'first-aid', 'mechanics', 'environment', 'legislation']
+                categories: ['defensive', 'first-aid', 'mechanics', 'environment', 'legislation', 'signs']
             },
             'renovacao': {
                 title: 'Renovação CNH',
@@ -285,46 +290,13 @@
                 totalQuestions: 30,
                 time: 40 * 60,
                 passingScore: 21,
-                categories: ['defensive', 'first-aid', 'mechanics', 'environment', 'legislation']
+                categories: ['defensive', 'first-aid', 'mechanics', 'environment', 'legislation', 'signs']
             }
         };
         let selectedTestConfig = {};
 
-        // --- All Questions ---
-        const allQuestions = [
-            { category: 'defensive', question: "A velocidade compatível com a segurança permite ao condutor:", options: ["Realizar ultrapassagens arriscadas.","Manter a mesma velocidade em qualquer condição de via ou tempo.","Uma reação para evitar atingir um obstáculo, um pedestre ou outro veículo.","Frear bruscamente sem se preocupar com o veículo de trás."], answer: 2 },
-            { category: 'defensive', question: "Sob neblina ou cerração, o condutor deve utilizar:", options: ["Farol alto.","Pisca-alerta.","Luzes de posição (farolete).","Apenas a buzina para alertar os outros."], answer: 2 },
-            { category: 'defensive', question: "A forma correta de segurar o volante de direção é com as mãos na posição:", options: ["12 horas e 6 horas.","10 horas e 10 minutos.","Apoiadas na parte de cima, juntas.","9 horas e 15 minutos (semelhante aos ponteiros de um relógio)."], answer: 3 },
-            { category: 'defensive', question: "Distância de parada total é a soma da:", options: ["Distância de frenagem com a distância de ultrapassagem.","Distância de reação com a distância de frenagem.","Distância de seguimento com a distância de reação.","Distância de percepção com a distância lateral."], answer: 1 },
-            { category: 'defensive', question: "Um acidente ocasionado por excesso de velocidade e avanço de sinal é classificado como:", options: ["Negligência.", "Imperícia.", "Imprudência.", "Caso fortuito."], answer: 2 },
-            { category: 'defensive', question: "Em caso de chuva numa rodovia, o condutor deve:", options: ["Aumentar a velocidade para sair da chuva mais rápido.","Manter a velocidade e ligar o pisca-alerta.","Reduzir a velocidade, aumentar a distância do veículo à frente e acender o farol baixo.","Colar no veículo da frente para ter melhor visibilidade."], answer: 2 },
-            { category: 'defensive', question: "Para reduzir os 'pontos cegos' do veículo, o condutor deve:", options: ["Retirar os encostos de cabeça.","Usar película espelhada nos vidros.","Ajustar corretamente os espelhos retrovisores interno e externos.","Dirigir com os vidros laterais abertos."], answer: 2 },
-            { category: 'legislation', question: "O tráfego de veículos em acostamentos é:", options: ["Permitido para ultrapassagem.","Permitido em caso de congestionamento.","Proibido, exceto para acesso a imóveis ou conversões.", "Permitido para veículos de emergência com sirene desligada."], answer: 2 },
-            { category: 'legislation', question: "Qual destes NÃO é um equipamento obrigatório para veículos automotores?", options: ["Cinto de segurança.", "Encosto de cabeça.", "Farol de milha.", "Extintor de incêndio (para os veículos obrigados por lei)."], answer: 2 },
-            { category: 'legislation', question: "O registrador de velocidade e tempo (tacógrafo) é obrigatório para:", options: ["Todos os veículos de carga.","Veículos de transporte de passageiros com mais de 10 lugares e de transporte escolar.","Apenas para caminhões com mais de 20 anos de uso.","Qualquer veículo que trafegue em rodovias federais."], answer: 1 },
-            { category: 'first-aid', question: "Em caso de acidente com vítima, a primeira atitude a ser tomada é:", options: ["Remover a vítima do local imediatamente.","Oferecer água para a vítima se acalmar.","Verificar os riscos no local e sinalizar a área para evitar novos acidentes.","Tentar identificar o culpado pelo acidente."], answer: 2 },
-            { category: 'first-aid', question: "Ao socorrer um motociclista acidentado, o que NÃO se deve fazer?", options: ["Conversar com a vítima para mantê-la calma.","Verificar se a vítima está respirando.","Retirar o capacete da vítima.","Chamar o serviço de emergência (SAMU 192 ou Bombeiros 193)."], answer: 2 },
-            { category: 'first-aid', question: "Qual o método mais indicado para conter uma hemorragia externa?", options: ["Fazer um torniquete imediatamente.","Aplicar pó de café sobre o ferimento.","Lavar o local com água e sabão.","Fazer compressão direta sobre o ferimento com um pano limpo."], answer: 3 },
-            { category: 'first-aid', question: "Uma vítima de acidente de trânsito está com fumaça saindo do veículo. Se não houver risco pessoal, o socorrista deve:", options: ["Retirar a vítima de dentro do veículo o mais rápido possível.","Jogar água no motor para apagar o fogo.","Afastar-se e esperar os bombeiros.","Tentar abrir as portas para ventilar sem movimentar a vítima."], answer: 0 },
-            { category: 'first-aid', question: "Na maioria das regiões do Brasil, o telefone 192 corresponde ao:", options: ["Polícia Militar", "Corpo de Bombeiros", "Polícia Rodoviária Federal", "SAMU - Serviço de Atendimento Móvel de Urgência"], answer: 3 },
-            { category: 'environment', question: "Atirar lixo ou objetos pela janela do veículo é uma infração que:", options: ["Não causa problemas, pois as ruas são limpas regularmente.","Agride o meio ambiente, pode causar acidentes e é uma infração de trânsito.","É permitido, desde que seja em pequena quantidade.","É um ato de cidadania, pois gera empregos para os garis."], answer: 1 },
-            { category: 'environment', question: "O órgão responsável por estabelecer os limites de emissão de gases poluentes por veículos é o:", options: ["CONTRAN", "DETRAN", "DENATRAN", "CONAMA"], answer: 3 },
-            { category: 'environment', question: "A manutenção preventiva do veículo, como a troca de filtros e a regulagem do motor, contribui para:", options: ["Aumentar o consumo de combustível.","Piorar a qualidade do ar.","Diminuir a poluição do ar e sonora.","Aumentar o desgaste das peças."], answer: 2 },
-            { category: 'environment', question: "O que é cidadania no trânsito?", options: ["Apenas conhecer as leis de trânsito.","É o direito de usar as vias como quiser.","É respeitar os direitos e deveres de todos os usuários da via, colaborando para um trânsito seguro e humano.","É ter um veículo novo e potente."], answer: 2 },
-            { category: 'environment', question: "Qual o destino ambientalmente correto para pneus velhos?", options: ["Queimá-los em um terreno baldio.","Jogá-los em rios ou córregos.","Levá-los a pontos de coleta para reciclagem.","Deixá-los no acostamento da rodovia."], answer: 2 },
-            { category: 'mechanics', question: "A retirada do catalisador de um automóvel:", options: ["Melhora o desempenho do motor e economiza combustível.","É uma modificação permitida pelo CTB.","Aumenta a emissão de poluentes e é uma alteração proibida.","Não tem efeito sobre o meio ambiente."], answer: 2 },
-            { category: 'mechanics', question: "A luz de advertência da bateria acesa no painel com o motor em funcionamento indica um problema no:", options: ["Sistema de freios.","Alternador ou na correia que o movimenta.","Radiador.","Sistema de injeção eletrônica."], answer: 1 },
-            { category: 'mechanics', question: "Para garantir uma boa manutenção, os pneus devem ser calibrados:", options: ["Mensalmente, com os pneus quentes.","Apenas quando for fazer uma viagem longa.","Semanalmente, com os pneus frios.","Diariamente, com os pneus quentes."], answer: 2 },
-            { category: 'mechanics', question: "A função do sistema de arrefecimento (ou refrigeração) é:", options: ["Aquecer o motor rapidamente.","Filtrar o ar que vai para o motor.","Controlar a temperatura do motor, evitando o superaquecimento.","Lubrificar as partes móveis do motor."], answer: 2 },
-            { category: 'mechanics', question: "O sistema que tem a finalidade de transmitir a força do motor para as rodas é o de:", options: ["Suspensão", "Transmissão", "Freios", "Direção"], answer: 1 },
-            { category: 'legislation', question: "O painel de instrumentos do veículo serve para:", options: ["Apenas indicar a velocidade.","Avisar sobre o nível de combustível e a rotação do motor.","Informar o condutor sobre as condições de funcionamento do veículo.","Controlar o sistema de som."], answer: 2 },
-            { category: 'mechanics', question: "A função do silenciador no veículo é:", options: ["Aumentar a potência do motor.","Diminuir os ruídos gerados pela descarga dos gases do motor.","Economizar combustível.","Filtrar os gases do escapamento."], answer: 1 },
-            { category: 'mechanics', question: "A verificação do nível de óleo do motor deve ser feita:", options: ["Com o motor quente e em funcionamento.","A cada 6 meses, independentemente do uso.","Apenas nas revisões na concessionária.","Periodicamente, com o veículo em local plano e com o motor frio."], answer: 3 },
-            { category: 'mechanics', question: "O que o carburador, nos veículos mais antigos, foi substituído nos mais modernos?", options: ["Pela injeção eletrônica.","Pelo distribuidor.","Pela bobina.","Pelo alternador."], answer: 0 },
-            { category: 'defensive', question: "Vibrações no volante podem indicar problemas com:", options: ["O nível de óleo do motor.","A bateria do veículo.","O balanceamento das rodas.","O sistema de escapamento."], answer: 2 }
-        ];
-
         // --- State ---
+        let allQuestions = [];
         let currentQuestions = [];
         let userAnswers = [];
         let currentQuestionIndex = 0;
@@ -334,6 +306,35 @@
         let userName = '';
 
         // --- Functions ---
+        async function fetchQuestions(filename) {
+            try {
+                const response = await fetch(filename);
+                if (!response.ok) {
+                    throw new Error(`HTTP error! status: ${response.status}`);
+                }
+                return await response.json();
+            } catch (error) {
+                console.error(`Could not fetch ${filename}:`, error);
+                alert(`Erro ao carregar as questões do arquivo ${filename}. Verifique se o arquivo existe e está no servidor web. Detalhes no console.`);
+                return []; 
+            }
+        }
+
+        async function loadAllQuestions() {
+            const filenames = [
+                "direcao_defensiva.json",
+                "primeiros_socorros.json",
+                "meio_ambiente_e_cidadania.json",
+                "mecanica.json",
+                "legislacao.json",
+                "placas.json"
+            ];
+
+            const promises = filenames.map(filename => fetchQuestions(filename));
+            const results = await Promise.all(promises);
+            allQuestions = [].concat(...results);
+        }
+
         function shuffle(array) {
             let currentIndex = array.length, randomIndex;
             while (currentIndex !== 0) {
@@ -362,37 +363,6 @@
             });
         }
 
-        function buildQuestionElements() {
-            questionsContainer.innerHTML = '';
-            currentQuestions.forEach((q, index) => {
-                const questionEl = document.createElement('div');
-                questionEl.className = 'question-card absolute top-0 left-0 w-full p-4 opacity-0 transition-opacity duration-300';
-                if (index !== 0) questionEl.classList.add('hidden');
-                questionEl.id = `question-${index}`;
-                
-                let optionsHTML = '';
-                q.options.forEach((option, i) => {
-                    optionsHTML += `
-                        <div>
-                            <input type="radio" name="question${index}" id="q${index}o${i}" value="${i}" class="hidden">
-                            <label for="q${index}o${i}" class="option-label block w-full p-4 border-2 border-slate-200 rounded-lg cursor-pointer">
-                                <div><span class="font-bold mr-3">${String.fromCharCode(65 + i)})</span> ${option}</div>
-                                <div class="check-icon"></div>
-                            </label>
-                        </div>
-                    `;
-                });
-
-                questionEl.innerHTML = `
-                    <p class="text-xl font-bold text-slate-900 mb-6">${index + 1}. ${q.question}</p>
-                    <div class="space-y-3">
-                        ${optionsHTML}
-                    </div>
-                `;
-                questionsContainer.appendChild(questionEl);
-            });
-        }
-
         function setupQuiz() {
             const selectedType = document.querySelector('input[name="test-type"]:checked').value;
             selectedTestConfig = testTypes[selectedType];
@@ -405,9 +375,7 @@
             quizFinished = false;
             reviewMode = false;
             
-            buildQuestionElements();
             buildNavGrid();
-            addOptionListeners();
             displayQuestion(0);
             
             submitBtn.disabled = false;
@@ -428,14 +396,13 @@
             }
         }
 
-        function addOptionListeners() {
-            questionsContainer.querySelectorAll('input[type="radio"]').forEach(radio => {
+        function addOptionListenersForCurrentQuestion() {
+            questionOptionsEl.querySelectorAll('input[type="radio"]').forEach(radio => {
                 radio.addEventListener('change', (e) => {
                     if (reviewMode) return;
-                    const questionIndex = parseInt(e.target.name.replace('question', ''));
-                    userAnswers[questionIndex] = parseInt(e.target.value);
+                    userAnswers[currentQuestionIndex] = parseInt(e.target.value);
                     
-                    const labels = document.querySelectorAll(`#question-${questionIndex} .option-label`);
+                    const labels = questionOptionsEl.querySelectorAll('.option-label');
                     labels.forEach(label => {
                         label.classList.remove('selected');
                         label.querySelector('.check-icon').innerHTML = '';
@@ -451,29 +418,58 @@
 
         function displayQuestion(index) {
             if (index < 0 || index >= currentQuestions.length) return;
-
-            const currentCard = document.getElementById(`question-${currentQuestionIndex}`);
-            if (currentCard && currentQuestionIndex !== index) {
-                currentCard.classList.add('opacity-0');
-                setTimeout(() => currentCard.classList.add('hidden'), 300);
-            }
-
             currentQuestionIndex = index;
-            const nextCard = document.getElementById(`question-${currentQuestionIndex}`);
-            if (nextCard) {
-                const radioValue = userAnswers[currentQuestionIndex];
-                if (radioValue !== null) {
-                    const radioToSelect = nextCard.querySelector(`input[value="${radioValue}"]`);
-                    if (radioToSelect) {
-                        radioToSelect.checked = true;
-                    }
+
+            const questionData = currentQuestions[index];
+
+            questionContent.style.opacity = 0;
+
+            setTimeout(() => {
+                questionTitleEl.textContent = `${index + 1}. ${questionData.question}`;
+                
+                questionImageContainer.innerHTML = '';
+                if (questionData.image) {
+                    const img = document.createElement('img');
+                    img.src = questionData.image;
+                    img.alt = `Placa de trânsito para a questão ${index + 1}`;
+                    img.className = 'mx-auto h-40 w-40 object-contain';
+                    img.onerror = () => { img.style.display = 'none'; }; // Hide if image fails to load
+                    questionImageContainer.appendChild(img);
                 }
-                nextCard.classList.remove('hidden');
-                setTimeout(() => nextCard.classList.remove('opacity-0'), 10);
-            }
-            
-            updateNavGrid();
-            updateNavButtons();
+
+                let optionsHTML = '';
+                questionData.options.forEach((option, i) => {
+                    if (reviewMode) {
+                        const isCorrectAnswer = i === questionData.answer;
+                        const isUserAnswer = userAnswers[index] === i;
+                        let labelClass = 'border-slate-200';
+                        let iconHTML = '';
+
+                        if (isCorrectAnswer) {
+                            labelClass = 'correct';
+                            if (isUserAnswer) iconHTML = correctSVG;
+                        } else if (isUserAnswer) {
+                            labelClass = 'incorrect';
+                            iconHTML = incorrectSVG;
+                        }
+                        optionsHTML += `<div><label class="option-label block w-full p-4 border-2 rounded-lg cursor-default ${labelClass}"><div><span class="font-bold mr-3">${String.fromCharCode(65 + i)})</span> ${option}</div><div class="check-icon" style="opacity: 1; transform: scale(1);">${iconHTML}</div></label></div>`;
+                    } else {
+                        const isChecked = userAnswers[index] === i ? 'checked' : '';
+                        const isSelectedClass = userAnswers[index] === i ? 'selected' : '';
+                        optionsHTML += `<div><input type="radio" name="question${index}" id="q${index}o${i}" value="${i}" class="hidden" ${isChecked}><label for="q${index}o${i}" class="option-label block w-full p-4 border-2 border-slate-200 rounded-lg cursor-pointer ${isSelectedClass}"><div><span class="font-bold mr-3">${String.fromCharCode(65 + i)})</span> ${option}</div><div class="check-icon">${isSelectedClass ? checkSVG : ''}</div></label></div>`;
+                    }
+                });
+                questionOptionsEl.innerHTML = optionsHTML;
+
+                if (!reviewMode) {
+                    addOptionListenersForCurrentQuestion();
+                }
+                
+                updateNavGrid();
+                updateNavButtons();
+
+                questionContent.style.opacity = 1;
+            }, 200);
         }
         
         function updateNavGrid() {
@@ -569,30 +565,6 @@
             quizScreen.classList.remove('hidden');
             resultScreen.classList.add('hidden');
             submitBtn.classList.add('hidden');
-            
-            currentQuestions.forEach((q, index) => {
-                const questionEl = document.getElementById(`question-${index}`);
-                const inputs = questionEl.querySelectorAll('input[type="radio"]');
-                inputs.forEach(input => input.disabled = true);
-
-                const options = questionEl.querySelectorAll('.option-label');
-                options.forEach((optLabel, i) => {
-                    optLabel.classList.remove('selected', 'hover:bg-slate-50');
-                    optLabel.style.cursor = 'default';
-                    const iconContainer = optLabel.querySelector('.check-icon');
-                    iconContainer.innerHTML = '';
-
-                    if (i === q.answer) {
-                        optLabel.classList.add('correct');
-                        if (userAnswers[index] === i) {
-                           iconContainer.innerHTML = correctSVG;
-                        }
-                    } else if (userAnswers[index] === i) {
-                        optLabel.classList.add('incorrect');
-                        iconContainer.innerHTML = incorrectSVG;
-                    }
-                });
-            });
             displayQuestion(0);
         }
 
@@ -635,10 +607,11 @@
         nextBtn.addEventListener('click', () => displayQuestion(currentQuestionIndex + 1));
 
         // --- Initial Load ---
-        document.addEventListener('DOMContentLoaded', () => {
+        document.addEventListener('DOMContentLoaded', async () => {
+            await loadAllQuestions();
             buildTestTypeOptions();
         });
 
     </script>
 </body>
-</ht
+</html>
